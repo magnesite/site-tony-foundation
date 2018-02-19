@@ -86,6 +86,7 @@
 }
 
 .debug-bar-maximized #querylist {
+	display: none;
 	position: fixed;
 	top: 28px;
 	height: auto;

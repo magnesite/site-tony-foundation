@@ -77,6 +77,10 @@ if ( ! function_exists( 'tonyfoundation_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		// Add support for specific post formats
+		// for reference see https://developer.wordpress.org/themes/functionality/post-formats/
+		add_theme_support( 'post-formats', array( 'gallery') );
 	}
 endif;
 add_action( 'after_setup_theme', 'tonyfoundation_setup' );
@@ -136,9 +140,9 @@ add_action( 'widgets_init', 'tonyfoundation_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tonyfoundation_scripts() {
-    
+
         wp_enqueue_style('tonyfoundation-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Slab:100,300,400,700');
-        
+
         wp_enqueue_style( 'tonyfoundation-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'tonyfoundation-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
@@ -147,7 +151,7 @@ function tonyfoundation_scripts() {
             'expand' => __('Expand child menu', 'tonyfoundation'),
             'collapse' => __('Collapse child menu', 'tonyfoundation')
         ));
-        
+
         wp_enqueue_script( 'tonyfoundation-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -183,3 +187,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Admin panel customization
+// Change placeholder text in the post editor for the aboutsection post type
+add_filter( 'enter_title_here', function( $title ) {
+    $screen = get_current_screen();
+
+    if  ( 'aboutsection' == $screen->post_type ) {
+        $title = 'Enter section title here';
+    }
+
+    return $title;
+} );

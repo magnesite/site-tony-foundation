@@ -185,11 +185,11 @@ class Debug_Bar {
 	}
 
 	function body_class( $classes ) {
-		if ( is_array( $classes ) ) {
-			$classes[] = 'debug-bar-maximized';
-		} else {
-			$classes .= ' debug-bar-maximized ';
-		}
+		// if ( is_array( $classes ) ) {
+		// 	$classes[] = 'debug-bar-maximized';
+		// } else {
+		// 	$classes .= ' debug-bar-maximized ';
+		// }
 
 		if ( isset( $_GET['debug-bar'] ) ) {
 			if ( is_array( $classes ) ) {
