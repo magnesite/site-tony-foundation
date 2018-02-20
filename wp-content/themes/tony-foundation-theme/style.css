@@ -440,9 +440,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 2px solid;
-	border-color: #000000;
-	border-radius: 3px;
+	border: none;
 	background: transparent;
 	color: #000000;
 	font-size: 1em;
@@ -560,7 +558,7 @@ a:hover, a:active {
     margin: 0;
     padding-top: 1em;
     padding-left: 0;
-      
+
 }
 
 .main-navigation ul ul {
@@ -594,7 +592,6 @@ a:hover, a:active {
 }
 
 .main-navigation ul a {
-    display: inline-block;
     font-size: .8em;
     width: 100%;
     padding: .5em 1em .5em 0;
@@ -610,14 +607,14 @@ a:hover, a:active {
 .main-navigation ul .current-menu-item > a,
 .main-navigation ul .current_page_ancestor > a,
 .main-navigation ul .current-menu-ancestor > a {
-    
+
 }
 
-.main-navigation ul .menu-item-has-children,
+/* .main-navigation ul .menu-item-has-children,
 .main-navigation ul .page-item-has-children {
     min-width: 218px;
-}
-    
+} */
+
 .main-navigation ul .menu-item-has-children > a,
 .main-navigation ul .page_item_has_children > a {
     padding-right: 2em;
@@ -655,33 +652,33 @@ buttton.dropdown-toggle {
     .menu-toggle {
         display: none;
     }
-    
+
     .main-navigation .menu-item-has-children > a, .main-navigation .page_item_has_children > a {
         padding-right: 2em;
         background: hsla(0, 0%, 100%, .1);
     }
-    
+
     .main-navigation ul {
         display: block;
         display: flex;
         flex-wrap: wrap;
     }
-    
+
     .main-navigation ul ul {
         flex-direction: column;
         background: hsla(0, 0%, 100%, .1);
         margin-left: 0;
     }
-    
+
     .main-navigation ul ul li {
         padding-left: 0;
     }
-    
+
     .main-navigation ul ul li a {
         width: 218px;
         background: none;
     }
-    
+
     .main-navigation ul li a {
         padding: .4em 1em;
     }
@@ -809,7 +806,6 @@ buttton.dropdown-toggle {
 --------------------------------------------------------------*/
 .site-header {
     position: relative;
-    padding: 1em;
     font-family: "Roboto Slab", serif;
 }
 
@@ -821,7 +817,7 @@ buttton.dropdown-toggle {
 
 @media screen and (min-width: 600px) {
     .site-header {
-        padding: 1em 2em;
+        padding: .5em 1em 0 1em;
     }
 }
 
@@ -834,7 +830,6 @@ buttton.dropdown-toggle {
     margin: 0;
     padding: 0;
     font-size: 1.6em;
-    line-height: 1em;
     font-weight: 400;
 }
 

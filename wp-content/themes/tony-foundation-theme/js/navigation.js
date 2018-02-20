@@ -17,16 +17,16 @@
 			.append( $( '<span />', { 'class': 'screen-reader-text', text: tonyfoundationScreenReaderText.expand }) );
 
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
-                
-                
+
+
                 // Set the active submenu dropdown toggle button initial state.
 		container.find( '.current-menu-ancestor > button' )
 			.addClass( 'toggled-on' )
 			.attr( 'aria-expanded', 'true' )
 			.find( '.screen-reader-text' )
 			.text( tonyfoundationScreenReaderText.collapse );
-	
-                
+
+
 		// Set the active submenu initial state.
 		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
 
