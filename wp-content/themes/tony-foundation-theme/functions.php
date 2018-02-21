@@ -99,15 +99,12 @@ add_action( 'after_setup_theme', 'tonyfoundation_content_width', 0 );
 
 /**
  * Add preconnect for Google Fonts.
- *
- * @since Twenty Seventeen 1.0
- *
  * @param array  $urls           URLs to print for resource hints.
  * @param string $relation_type  The relation type the URLs are printed.
  * @return array $urls           URLs to print for resource hints.
  */
 function tonyfoundation_resource_hints( $urls, $relation_type ) {
-	if ( wp_style_is( 'twentyseventeen-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+	if ( wp_style_is( 'tonyfoundation-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
 		$urls[] = array(
 			'href' => 'https://fonts.gstatic.com',
 			'crossorigin',
@@ -145,9 +142,9 @@ function tonyfoundation_scripts() {
 
         wp_enqueue_style( 'tonyfoundation-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'tonyfoundation-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+				wp_enqueue_script( 'tonyfoundation-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
 
-	wp_localize_script('tonyfoundation-navigation', 'tonyfoundationScreenReaderText', array (
+				wp_localize_script('tonyfoundation-navigation', 'tonyfoundationScreenReaderText', array (
             'expand' => __('Expand child menu', 'tonyfoundation'),
             'collapse' => __('Collapse child menu', 'tonyfoundation')
         ));
@@ -186,6 +183,11 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Load SVG icon functions.
+ */
+require get_template_directory() . '/inc/icon-functions.php';
 
 // Admin panel customization
 // Change placeholder text in the post editor for the aboutsection post type

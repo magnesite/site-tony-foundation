@@ -50,12 +50,8 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
-                
-                
+
+
 	</header><!-- #masthead -->
-        
-        <?php if ( is_front_page() ) : ?>
-            <?php if ( the_header_image_tag() ) : ?><?php endif; ?>
-        <?php endif; ?>
-        
+
 	<div id="content" class="site-content">
