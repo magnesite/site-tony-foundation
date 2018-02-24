@@ -297,7 +297,8 @@ h1 {
 }
 
 h2 {
-    font-size: 1.6em;
+	font-size: 1.2em;
+	font-weight: 600;
 }
 
 h3 {
@@ -570,6 +571,10 @@ a:hover {
 	padding-left: 0;
 }
 
+.main-navigation ul a {
+	color: #262626;
+}
+
 .main-navigation ul ul {
 	display: none;
 	top: 1.5em;
@@ -615,10 +620,10 @@ a:hover {
 	text-decoration: underline;
 }
 
-.main-navigation .menu-item-has-children,
+/* .main-navigation .menu-item-has-children,
 .main-navigation .page_item_has_children {
 	min-width: 218px;
-}
+} */
 
 .main-navigation .menu-item-has-children > a,
 .main-navigation .page_item_has_children > a {
@@ -628,11 +633,9 @@ a:hover {
 button.dropdown-toggle {
 	position: absolute;
 	right: 0;
-	border: none;
-	background: inherit;
-	color: white;
+	color: #F2F2F2;
 	line-height: 1.5em;
-	padding: .4em 1em .4em .5em;
+	padding: .4em .5em .4em .5em;
 }
 
 .menu-toggle {
@@ -661,7 +664,6 @@ button.dropdown-toggle {
 	.main-navigation .menu-item-has-children > a,
 	.main-navigation .page_item_has_children > a {
 		padding-right: 2em;
-		background: rgba(255, 255, 255, 0.1);
 	}
 	.main-navigation ul {
 		display: block;
@@ -809,12 +811,12 @@ button.dropdown-toggle {
 ## Global
 --------------------------------------------------------------*/
 .site-content {
-    padding: 1.6em;
+    padding: 3em;
 }
 
 @media screen and (min-width: 600px) {
     .site-content {
-        padding: 2em;
+        padding: 3em;
     }
 }
 
@@ -848,6 +850,7 @@ button.dropdown-toggle {
     padding: 0;
     font-size: 1.6em;
     font-weight: 400;
+		line-height: 1.2em;
 }
 
 .site-title a {
@@ -874,6 +877,7 @@ button.dropdown-toggle {
 
 .custom-logo {
     max-width: 30px;
+
 }
 
 @media screen and (min-width: 900px) {
@@ -923,8 +927,48 @@ button.dropdown-toggle {
 	margin: 0 0 1.5em;
 }
 
+.intro {
+	font-style: italic;
+}
+
+/* style for single post */
+.type-post .post-thumbnail img {
+	max-height: 3em;
+}
+
+.type-post > .entry-content {
+	margin: 0;
+}
+
+/* style for posts on blog index */
+article .post-thumbnail img {
+	max-height: 2em;
+}
+
 /* About page */
 
+.about-page-header  {
+		margin: -60px;
+}
+
+.about-hero-wrapper {
+	background-color: #D9D9D9;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+.about-hero-wrapper img {
+	max-width: 80%;
+}
+
+#mission {
+	margin-top: 150px;
+}
+
+.about-section {
+	margin: 10%;
+}
 
 figure {
 	float: right;
@@ -946,51 +990,108 @@ figure {
 figure img {
 	display: inline-block;
 }
+
 figcaption {
 	text-align: center;
 }
+
 .about-section h1 {
 	font-size: 1.2em;
 	font-weight: 600;
 }
 
 .tony-quote {
-	font-weight: 100;
+	font-style: italic;
 }
 
 .tony-quote-author {
-	font-style: italic;
 	font-size: .8em;
+}
+#leadership {
+	margin: 2%;
 }
 
 .profile-wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+#leadership h1 {
+	text-align: center;
 }
 
 .leader-profile {
 	text-align: center;
-	justify-content: space-between;
+	max-width: 33%;
+	min-width: 275px;
 }
 
+
+
 .leader-profile img {
-	max-width: 160px;
+	max-width: 120px;
 	padding-top: 20px;
 }
 
 .leader-profile h2 {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	line-height: 1;
 }
 
 .leader-profile h3 {
 	font-family: 'Roboto Condensed', sans-serif;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	margin: 5px 0;
 	text-transform: lowercase;
 	font-variant: small-caps;
 }
 
+.leader-profile p {
+	max-width: 70%;
+	margin: 0 auto;
+	font-size: .8em;
+}
+
+/* DONATION PAGE */
+.donation-form-wrapper {
+	margin: -3em;
+}
+
+/* APPLY PAGE */
+.application-form-wrapper {
+	margin: -3em;
+}
+
+/* FRONT PAGE */
+
+.front-page {
+	margin: -60px;
+}
+
+.site-features-wrapper {
+	display: flex;
+	justify-content: center;
+  margin: 0 3% 0 3%;
+}
+
+.site-feature {
+	margin: 0 1em 0 1em;
+}
+
+.site-feature p {
+	margin-top: -3em;
+  text-align: center;
+}
+
+.cancer-color-band {
+	margin-top: -10px;
+	padding: 0;
+}
+
+@media screen and (max-width: 520px) {
+
+}
 
 /*--------------------------------------------------------------
 ## Comments
@@ -1171,26 +1272,14 @@ SVG Fallbacks
 }
 
 /* temp dev colors */
-.site-header {
+/* .site-header {
 	background-color: pink;
-}
+} */
 
-.site-content {
+/* .site-content {
 	background-color: #0000ff1f;
-}
+} */
 
 .site-footer {
-	background-color: #95ec95;
-}
-
-.main-navigation ul {
-	background-color: red;
-}
-
-.main-navigation li {
-	background-color: orange;
-}
-
-.main-navigation li a {
-	background-color: yellow;
+	background-color: lightgray	;
 }

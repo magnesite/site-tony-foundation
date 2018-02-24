@@ -26,7 +26,7 @@ if ( ! function_exists( 'tonyfoundation_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'tonyfoundation' ),
+			esc_html_x( 'Posted %s', 'post date', 'tonyfoundation' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -63,7 +63,7 @@ if ( ! function_exists( 'tonyfoundation_posted_by' ) ) :
 			'<span class="edit-link">',
 			'</span>'
 		);
-                
+
         }
 endif;
 

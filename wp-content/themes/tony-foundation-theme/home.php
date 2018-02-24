@@ -1,49 +1,42 @@
 <?php
-/**
- * Template Name: Blog Landing Page
- * @package Tony_Foundation
- * Template Post Type: custompage
- */
+/*
+	Template Name: Home
+*/
+?>
+<?php get_header(); ?>
 
-get_header(); ?>
+<p>How do we want to style these?</p>
+	<article>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<?php // Display blog posts on any page
+		$temp = $wp_query; $wp_query= null;
+		$wp_query = new WP_Query(); $wp_query->query('posts_per_page=5' . '&paged='.$paged);
+		while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
-		<?php
-		if ( have_posts() ) :
+		<?php tonyfoundation_post_thumbnail(); ?>
+		<?php tonyfoundation_posted_on(); ?>
+		<h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
+		<?php the_excerpt(); ?>
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+		<?php endwhile; ?>
 
-			<?php
-			endif;
+		<?php if ($paged > 1) { ?>
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+		<nav id="nav-posts">
+			<div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
+			<div class="next"><?php previous_posts_link('Newer Posts &raquo;'); ?></div>
+		</nav>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+		<?php } else { ?>
 
-			endwhile;
+		<nav id="nav-posts">
+			<div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
+		</nav>
 
-			the_posts_navigation();
+		<?php } ?>
 
-		else :
+		<?php wp_reset_postdata(); ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+	</article>
 
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

@@ -187,7 +187,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Load SVG icon functions.
  */
-require get_template_directory() . '/inc/icon-functions.php';
+// require get_template_directory() . '/inc/icon-functions.php';
 
 // Admin panel customization
 // Change placeholder text in the post editor for the aboutsection post type

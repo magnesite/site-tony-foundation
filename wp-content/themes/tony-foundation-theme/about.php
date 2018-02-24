@@ -9,15 +9,31 @@ get_header(); ?>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<header>
-				<img class="hero"></img>
-				<p>placeholder for TF ribbon<p>
-				<h1>About us</h1>
+
+			<header class="about-page-header">
+				<div class="about-hero-wrapper">
+						<img src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/about-hero.png">
+				</div><!--hero-wrapper-->
+				<img class="cancer-color-band" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/colors.png">
 			</header>
 
-
 			<section id="mission" class="about-section">
-				<h1>Mission</h1>
+				<h1>About Tony Foundation</h1>
+				<p>A cancer diagnosis turns a family’s world upside down. While the shock of such news and is still fresh, life and its obligations continue – sometimes with mounting medical bills and other financial stresses. This is especially critical when the person who is diagnosed with cancer happens to be the financial provider for the family, and their medical condition is serious enough that they are no longer able to work.</p>
+				<p>Tony Laudadio’s family faced this very predicament, as have countless others around the world (read Tony’s story below). That’s why the Tony Foundation was created: to provide financial assistance to meet immediate, existing needs for families whose sole income earner, in their most productive years, has been diagnosed with cancer and is unable to continue employment.</p>
+				<p>We accomplish this by:</p>
+				<ul>
+					<li>Identifying critical needs for families in crisis due to cancer diagnosis</li>
+					<li>Filling a gap for cancer patients, aged 25-55, who were sole providers for their families/multiple dependants  and are no longer able to work due to their illness</li>
+					<li>Providing financial assistance to qualifying families</li>
+					<li>Connecting families with essential funding and programs to help their needs</li>
+					<li>If you are a family facing the uncertainty of a cancer diagnosis and the added circumstance of disability or unemployment, we invite you to reach out us for more information and to be considered for financial assistance.</li>
+				</ul>
+				<p>Families who apply for financial assistance will have their applications considered for merit and to ensure that they meet our criteria. For applicants who are not selected for direct financial assistance from the Tony Foundation, we will provide referral information to outside vetted resources and nonprofits that can potentially be of help.</p>
+
+
+
+
 				<p>Bacon ipsum dolor amet shoulder filet mignon non consectetur in tongue do meatloaf beef hamburger dolore consequat flank. Venison buffalo andouille quis voluptate salami, alcatra mollit kevin. Tongue ham hock dolore, ex short loin hamburger fugiat venison exercitation incididunt aliqua. </p>
 			</section><!--mission-->
 
