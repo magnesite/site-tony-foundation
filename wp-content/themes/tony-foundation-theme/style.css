@@ -994,11 +994,25 @@ article .post-thumbnail img {
 	margin: 10%;
 }
 
+@media screen and (max-width: 699px) {
+	.about-section {
+		margin: 0;
+	}
+}
+
+ul.mission {
+	margin-left: 0;
+}
+
+ul.mission li {
+	margin-bottom: 8px;
+}
+
+
 figure {
 	float: right;
   margin: 0;
   padding: 5px 0 10px 2em;
-
 }
 
 @media screen and (max-width: 600px) {
@@ -1031,6 +1045,7 @@ figcaption {
 .tony-quote-author {
 	font-size: .8em;
 }
+
 #leadership {
 	margin: 2%;
 }
@@ -1050,8 +1065,6 @@ figcaption {
 	max-width: 33%;
 	min-width: 275px;
 }
-
-
 
 .leader-profile img {
 	max-width: 120px;
@@ -1093,6 +1106,16 @@ figcaption {
 	margin: -60px;
 }
 
+.mission-banner {
+background-color: #666666;
+text-align: center;
+font-size: 1.5em;
+font-weight: 200;
+padding: 5% 15%;
+color: #F2F2F2;
+margin: -10px 0 40px 0;
+}
+
 .site-features-wrapper {
 	display: flex;
 	justify-content: center;
@@ -1113,6 +1136,11 @@ figcaption {
 	padding: 0;
 }
 
+div#mc_embed_signup {
+	max-width: 650px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
 @media screen and (max-width: 520px) {
 
 }

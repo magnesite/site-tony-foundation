@@ -22,7 +22,7 @@ get_header(); ?>
 				<p>A cancer diagnosis turns a family’s world upside down. While the shock of such news and is still fresh, life and its obligations continue – sometimes with mounting medical bills and other financial stresses. This is especially critical when the person who is diagnosed with cancer happens to be the financial provider for the family, and their medical condition is serious enough that they are no longer able to work.</p>
 				<p>Tony Laudadio’s family faced this very predicament, as have countless others around the world (read Tony’s story below). That’s why the Tony Foundation was created: to provide financial assistance to meet immediate, existing needs for families whose sole income earner, in their most productive years, has been diagnosed with cancer and is unable to continue employment.</p>
 				<p>We accomplish this by:</p>
-				<ul>
+				<ul class="mission">
 					<li>Identifying critical needs for families in crisis due to cancer diagnosis</li>
 					<li>Filling a gap for cancer patients, aged 25-55, who were sole providers for their families/multiple dependants  and are no longer able to work due to their illness</li>
 					<li>Providing financial assistance to qualifying families</li>
