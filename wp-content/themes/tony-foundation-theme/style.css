@@ -392,7 +392,9 @@ html {
 body {
 	background: #fff;
 	/* Fallback for when there is no custom background color defined. */
+	background: #F2F2F2;
 }
+
 
 hr {
 	background-color: #ccc;
@@ -567,7 +569,6 @@ a:hover {
 	display: none;
 	list-style: none;
 	margin: 0;
-	padding-top: 1em;
 	padding-left: 0;
 }
 
@@ -617,7 +618,7 @@ a:hover {
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 /* .main-navigation .menu-item-has-children,
@@ -625,10 +626,11 @@ a:hover {
 	min-width: 218px;
 } */
 
-.main-navigation .menu-item-has-children > a,
+/* .main-navigation .menu-item-has-children > a,
 .main-navigation .page_item_has_children > a {
 	padding-right: 2em;
-}
+} */
+
 
 button.dropdown-toggle {
 	position: absolute;
@@ -638,13 +640,17 @@ button.dropdown-toggle {
 	padding: .4em .5em .4em .5em;
 }
 
+button.dropdown-toggle:hover {
+	background-color: transparent;
+}
+
 .menu-toggle {
 	position: absolute;
 	top: 0;
 	right: 0;
 	display: block;
-	margin: 1.2em 1.2em 0 0;
-	padding: .6em .8em;
+	margin: .5em .5em 0 0;
+	padding: .6em .8em 0 .8em;
 	font-size: 80%;
 	text-transform: uppercase;
 	color: white;
@@ -654,9 +660,18 @@ button.dropdown-toggle {
 /* Toggle small menu and children on */
 .toggled-on ul,
 .sub-menu.toggled-on {
-	display: block;
+	display: inline-block;
+	margin-top: .4em;
+	padding: 0 auto;
+	text-align: center;
+	width: 100%;
 }
 
+
+
+.toggled-on ul li {
+	margin: 0 auto;
+}
 @media screen and (min-width: 600px) {
 	.menu-toggle {
 		display: none;
@@ -671,19 +686,27 @@ button.dropdown-toggle {
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-wrap: wrap;
-		    flex-wrap: wrap;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 	.main-navigation ul ul {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		    -ms-flex-direction: column;
 		        flex-direction: column;
-		background: rgba(255, 255, 255, 0.1);
+		background: #F2F2F2;
 		margin-left: 0;
+		position: absolute;
 	}
 	.main-navigation ul ul li {
 		padding-left: 0;
+		position: relative;
 	}
+
+	.main-navigation ul ul li:hover {
+		background-color: #EAE6FF;
+	}
+
 	.main-navigation ul ul li a {
 		width: 218px;
 		background: none;
@@ -693,11 +716,11 @@ button.dropdown-toggle {
 	}
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 920px) {
 	.main-navigation ul {
 		-webkit-box-pack: end;
-		    -ms-flex-pack: end;
-		        justify-content: flex-end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
 		padding-top: 0;
 		/* If you want dropdowns to open on hover, uncomment this: */
 		/*
@@ -851,6 +874,7 @@ button.dropdown-toggle {
     font-size: 1.6em;
     font-weight: 400;
 		line-height: 1.2em;
+		margin-top: .5em;
 }
 
 .site-title a {
@@ -861,6 +885,7 @@ button.dropdown-toggle {
 
 .site-title a:hover {
     text-decoration: none;
+		background-color: transparent;
 }
 
 .site-title a:focus {
@@ -877,10 +902,9 @@ button.dropdown-toggle {
 
 .custom-logo {
     max-width: 30px;
-
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 920px) {
     .site-header {
         display: flex;
         justify-content: space-between;
