@@ -562,6 +562,7 @@ a:hover {
     display: block;
     font-family: 'Roboto Condensed', sans-serif;
     clear: left;
+		background-color: orange;
 }
 
 .main-navigation ul {
@@ -570,10 +571,12 @@ a:hover {
 	margin: 0;
 	padding-left: 0;
 	line-height:	normal;
+	background-color: yellow;
 }
 
 .main-navigation ul a {
 	color: #262626;
+	background-color: blue;
 }
 
 .main-navigation ul ul {
@@ -606,6 +609,7 @@ a:hover {
 
 .main-navigation li {
 	position: relative;
+	background-color: green;
 }
 
 .main-navigation a {
@@ -1129,22 +1133,37 @@ ul.mission li {
 	}
 }
 
+/* site feature section */
 
+.site-feature svg {
+	display: block;
+	margin: 20px auto;
+}
 
 .site-features-wrapper {
-	display: flex;
-	justify-content: center;
-  margin: 0 3% 0 3%;
+	display: block;
+	width: 100%;
 }
 
 .site-feature {
-	margin: 0 1em 0 1em;
+	margin: .5em auto;
+	background-color: #FEFEFE; /* IE6-9 */
+	max-width: 350px;
+	height: 100%;
 }
 
-.site-feature p {
-	margin-top: -3em;
-  text-align: center;
+@media screen and (min-width: 550px) {
+	.site-features-wrapper {
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	.site-feature {
+		min-width: 30%;
+		max-width: 300px;
+		margin: 0em auto;
+	}
 }
+
 
 div#mc_embed_signup {
 	max-width: 650px;
@@ -1333,13 +1352,15 @@ SVG Fallbacks
 }
 
 /* temp dev colors */
-/* .site-header {
+
+.site-header {
 	background-color: pink;
-} */
+}
 
 /* .site-content {
 	background-color: #0000ff1f;
 } */
+
 
 .site-footer {
 	background-color: lightgray	;
