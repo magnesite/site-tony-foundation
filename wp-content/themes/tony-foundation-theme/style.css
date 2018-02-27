@@ -269,19 +269,19 @@ textarea {
 	color: #262626;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 1.4rem;
 	line-height: 1.5;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
     body,
     button,
     input,
     select,
     optgroup,
     textarea {
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 22px;
+	font-size: 1.6rem;
     }
 }
 
@@ -380,6 +380,7 @@ big {
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
+	min-width: 300px;
 }
 
 *,
@@ -390,11 +391,9 @@ html {
 }
 
 body {
-	background: #fff;
-	/* Fallback for when there is no custom background color defined. */
 	background: #F2F2F2;
+	/* Fallback for when there is no custom background color defined. */
 }
-
 
 hr {
 	background-color: #ccc;
@@ -570,6 +569,7 @@ a:hover {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	line-height:	normal;
 }
 
 .main-navigation ul a {
@@ -626,11 +626,18 @@ a:hover {
 	min-width: 218px;
 } */
 
-/* .main-navigation .menu-item-has-children > a,
+.main-navigation .menu-item-has-children > a,
 .main-navigation .page_item_has_children > a {
-	padding-right: 2em;
-} */
+	padding-right: 0;
+	margin-right: 0;
+}
 
+.menu-toggle {
+	position: absolute;
+	top: 1.1em;
+	right: 1.1em;
+
+}
 
 button.dropdown-toggle {
 	position: absolute;
@@ -644,19 +651,6 @@ button.dropdown-toggle:hover {
 	background-color: transparent;
 }
 
-.menu-toggle {
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: block;
-	margin: .5em .5em 0 0;
-	padding: .6em .8em 0 .8em;
-	font-size: 80%;
-	text-transform: uppercase;
-	color: white;
-	border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
 /* Toggle small menu and children on */
 .toggled-on ul,
 .sub-menu.toggled-on {
@@ -667,19 +661,15 @@ button.dropdown-toggle:hover {
 	width: 100%;
 }
 
-
-
 .toggled-on ul li {
 	margin: 0 auto;
 }
+
 @media screen and (min-width: 600px) {
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation .menu-item-has-children > a,
-	.main-navigation .page_item_has_children > a {
-		padding-right: 2em;
-	}
+
 	.main-navigation ul {
 		display: block;
 		display: -webkit-box;
@@ -688,12 +678,14 @@ button.dropdown-toggle:hover {
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		justify-content: center;
+		margin-top: 0px;
+	  margin-bottom: 0px;
 	}
 	.main-navigation ul ul {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
 		background: #F2F2F2;
 		margin-left: 0;
 		position: absolute;
@@ -708,27 +700,29 @@ button.dropdown-toggle:hover {
 	}
 
 	.main-navigation ul ul li a {
-		width: 218px;
 		background: none;
 	}
 	.main-navigation ul li a {
 		padding: .4em 1em;
+		font-size: .8em;
 	}
+
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 960px) {
 	.main-navigation ul {
 		-webkit-box-pack: end;
 		-ms-flex-pack: end;
 		justify-content: flex-end;
 		padding-top: 0;
+		margin-top: 0px;
+	  margin-bottom: 0px;
+
+	}
 		/* If you want dropdowns to open on hover, uncomment this: */
-		/*
-			li:hover > ul,
-				li:focus > ul {
-				display: block;
-			}
-			*/
+	li:hover > ul,
+	li:focus > ul {
+		display: block;
 	}
 }
 
@@ -779,23 +773,28 @@ button.dropdown-toggle:hover {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
-}
 
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
-}
+@media screen and (min-width: 550px) {
 
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	.alignleft {
+		display: inline;
+		float: left;
+		margin-right: 1.5em;
+	}
+
+	.alignright {
+		display: inline;
+		float: right;
+		margin-left: 1.5em;
+	}
+
+	.aligncenter {
+		clear: both;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 }
 
 /*--------------------------------------------------------------
@@ -833,15 +832,15 @@ button.dropdown-toggle:hover {
 /*--------------------------------------------------------------
 ## Global
 --------------------------------------------------------------*/
-.site-content {
-    padding: 3em;
-}
+/* .site-content {
+		padding: 2em;
+} */
 
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
     .site-content {
-        padding: 3em;
+        padding: 2em 1em 2em 1em;
     }
-}
+} */
 
 /*--------------------------------------------------------------
 ## Header
@@ -857,24 +856,18 @@ button.dropdown-toggle:hover {
     max-height: 60vh;
 }
 
-@media screen and (min-width: 600px) {
-    .site-header {
-        padding: .5em 1em 0 1em;
-    }
-}
-
 .site-branding {
-    min-height: 65px;
-    text-align: center;
+    /* min-height: 65px; */
+    text-align: left;
+		margin: 1em 60px 0 1em;
 }
 
 .site-title {
-    margin: 0;
     padding: 0;
-    font-size: 1.6em;
+    font-size: 24px;
+		font-size: 1.1em;
     font-weight: 400;
 		line-height: 1.2em;
-		margin-top: .5em;
 }
 
 .site-title a {
@@ -892,16 +885,26 @@ button.dropdown-toggle:hover {
     text-decoration: none;
 }
 
-.site-description {
+/* .site-description {
     font-family: "Roboto Condensed", sans-serif;
     margin: 0;
     margin-top: -20px;
     margin-left: 130px;
     font-size: 0.8em;
-}
+} */
 
 .custom-logo {
     max-width: 30px;
+}
+
+@media screen and (min-width: 600px) {
+    .site-branding {
+			text-align: center;
+			margin: 1em 1em 1em 1em;
+    }
+		.site-title {
+			margin-bottom: 0;
+		}
 }
 
 @media screen and (min-width: 920px) {
@@ -914,11 +917,14 @@ button.dropdown-toggle:hover {
         width: 40%;
         flex: 1 0 auto;
     }
+		.site-title {
+			margin: 0;
+		}
     .main-navigation {
-        width: 60%;    }
+        width: 60%;
+				margin: 1em 1em 0 0;
+			}
 }
-
-
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -940,6 +946,7 @@ button.dropdown-toggle:hover {
 	display: none;
 }
 
+
 .page-content,
 .entry-content,
 .entry-summary {
@@ -955,14 +962,31 @@ button.dropdown-toggle:hover {
 	font-style: italic;
 }
 
-/* style for single post */
-.type-post .post-thumbnail img {
-	max-height: 3em;
+@media screen and (max-width: 549px) {
+	.post figure {
+		display: block;
+		align-content: center;
+		float: none;
+		margin: 1em auto;
+	}
 }
 
-.type-post > .entry-content {
-	margin: 0;
+@media screen and (min-width: 600px) {
+	.post {
+		max-width: 800px;
+		margin: 0 auto;
+	}
 }
+
+/* frames for post and page body images */
+
+.post img {
+  position: relative;
+  border: 7px solid #FEFEFE;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
 
 /* style for posts on blog index */
 article .post-thumbnail img {
@@ -970,10 +994,6 @@ article .post-thumbnail img {
 }
 
 /* About page */
-
-.about-page-header  {
-		margin: -60px;
-}
 
 .about-hero-wrapper {
 	background-color: #D9D9D9;
@@ -1008,30 +1028,6 @@ ul.mission li {
 	margin-bottom: 8px;
 }
 
-
-figure {
-	float: right;
-  margin: 0;
-  padding: 5px 0 10px 2em;
-}
-
-@media screen and (max-width: 600px) {
-	figure {
-		float: none;
-		text-align: center;
-		min-width: 50%;
-	  margin: 0;
-	  padding: 5px 15px 25px 15px;
-	}
-}
-
-figure img {
-	display: inline-block;
-}
-
-figcaption {
-	text-align: center;
-}
 
 .about-section h1 {
 	font-size: 1.2em;
@@ -1100,21 +1096,40 @@ figcaption {
 	margin: -3em;
 }
 
-/* FRONT PAGE */
-
-.front-page {
-	margin: -60px;
-}
+/*--------------------------------------------------------------
+## Front page
+---------------------------------------------------------------*/
 
 .mission-banner {
-background-color: #666666;
-text-align: center;
-font-size: 1.5em;
-font-weight: 200;
-padding: 5% 15%;
-color: #F2F2F2;
-margin: -10px 0 40px 0;
+	background-color: #666666bf;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 200;
+  padding: 5% 5% 5% 5%;
+  color: #F2F2F2;
+  line-height: 1.1;
 }
+
+.hero-wrapper {
+	background-image: url('./images/tahoe-cropped.png');
+	padding-top: 30%;
+}
+
+@media screen and (min-width: 600px) {
+	.hero-wrapper {
+		background-image: url('./images/tahoe.png');
+		background-size: cover;
+		padding-top: 30%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.mission-banner {
+		padding: 5% 15%;
+	}
+}
+
+
 
 .site-features-wrapper {
 	display: flex;
@@ -1131,19 +1146,12 @@ margin: -10px 0 40px 0;
   text-align: center;
 }
 
-.cancer-color-band {
-	margin-top: -10px;
-	padding: 0;
-}
-
 div#mc_embed_signup {
 	max-width: 650px;
 	margin: 0 auto;
 	margin-top: 50px;
 }
-@media screen and (max-width: 520px) {
 
-}
 
 /*--------------------------------------------------------------
 ## Comments
@@ -1206,6 +1214,7 @@ object {
 .custom-logo-link {
 	display: inline-block;
 }
+
 
 
 /*--------------------------------------------------------------

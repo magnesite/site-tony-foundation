@@ -200,3 +200,5 @@ add_filter( 'enter_title_here', function( $title ) {
 
     return $title;
 } );
+
+?>

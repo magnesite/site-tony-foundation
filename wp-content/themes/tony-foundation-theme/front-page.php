@@ -16,9 +16,10 @@ get_header(); ?>
 
 	<div id="primary" class="content-area front-page">
 		<main id="main" class="front-page-main">
-			<img class="hero" src="<?php echo site_url(); ?>/wp-content/uploads/2018/02/cropped-emerald-bay-1.png" width="2000" height="703" alt="TF Local" srcset="<?php echo site_url(); ?>/wp-content/uploads/2018/02/cropped-emerald-bay-1.png 2000w, <?php echo site_url(); ?>/wp-content/uploads/2018/02/cropped-emerald-bay-1-300x105.png 300w, <?php echo site_url(); ?>/wp-content/uploads/2018/02/cropped-emerald-bay-1-768x270.png 768w, <?php echo site_url(); ?>/wp-content/uploads/2018/02/cropped-emerald-bay-1-1024x360.png 1024w" sizes="(max-width: 2000px) 100vw, 2000px">
-			<img class="cancer-color-band" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/colors.png">
-			<p class="mission-banner">The Tony Foundation meets immediate needs for families whose primary income earner is impacted by cancer.</p>
+			<div class="hero-wrapper">
+					<p class="mission-banner">The Tony Foundation meets immediate needs for families whose primary income earner is impacted by cancer.</p>
+			</div><!--hero-wrapper-->
+
 			<div class="site-features-wrapper">
 				<div class="site-feature">
 				<svg width="100%" height="100%" viewBox="0 0 389 234" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><rect id="landing-lg" x="-18.153" y="-942.417" width="1280" height="2729.43" style="fill:none;"/>
