@@ -122,28 +122,12 @@ function tonyfoundation_post_thumbnail() {
 		return;
 	}
 
-	if ( is_singular() ) :
-	?>
-
-	<div class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
-	</div><!-- .post-thumbnail -->
-
-	<?php else : ?>
-
-	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-		<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
-		?>
-	</a>
-
-	<?php endif; // End is_singular().
+ 	echo '<div class="post-thumbnail">'; ?>
+	<?php the_post_thumbnail(); ?>
+	<?php echo '</div><!-- .post-thumbnail -->';
 }
-endif;
+
+endif ;
 
 /* adds previous and next to post navigation */
 function tonyfoundation_post_navigation() {
