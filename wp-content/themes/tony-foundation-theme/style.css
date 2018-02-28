@@ -4,7 +4,7 @@ Theme URI: ''
 Author: Hailey Pate
 Author URI: http://magnesite.tech
 Description: A custom WordPress theme designed for Tony Foundation
-Version: 0.0.1
+Version: 0.0.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: tonyfoundation
@@ -269,11 +269,11 @@ textarea {
 	color: #262626;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 18px;
-	font-size: 1.4rem;
-	line-height: 1.5;
+	font-size: 1.2rem;
+	line-height: 1.4;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     body,
     button,
     input,
@@ -281,7 +281,21 @@ textarea {
     optgroup,
     textarea {
 	font-size: 22px;
-	font-size: 1.6rem;
+	color: green;
+	font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body,
+    button,
+    input,
+    select,
+    optgroup,
+    textarea {
+	font-size: 22px;
+	color: purple;
+	font-size: 1.4rem;
     }
 }
 
@@ -293,7 +307,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 1.8em;
-		line-height: 2em;
+		line-height: 1.8em;
 }
 
 h2 {
@@ -403,7 +417,7 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1em 0em;
 }
 
 ul {
@@ -414,9 +428,12 @@ ol {
 	list-style: decimal;
 }
 
+li {
+	margin-bottom: .6em;
+}
 li > ul,
 li > ol {
-	margin-bottom: 0;
+	margin-bottom: .5em;
 	margin-left: 1.5em;
 }
 
@@ -836,15 +853,52 @@ button.dropdown-toggle:hover {
 /*--------------------------------------------------------------
 ## Global
 --------------------------------------------------------------*/
-/* .site-content {
+.site-content {
 		padding: 2em;
-} */
+}
 
-/* @media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
     .site-content {
-        padding: 2em 1em 2em 1em;
+        margin: 2em;
     }
-} */
+}
+
+
+@media screen and (min-width: 500px) {
+    body,
+    button,
+    input,
+    select,
+    optgroup,
+    textarea {
+			font-size: 20px;
+			font-size: 1.3rem;
+    }
+		.site-content {
+    margin: 2em;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body,
+    button,
+    input,
+    select,
+    optgroup,
+    textarea {
+	font-size: 22px;
+	font-size: 1.4rem;
+    }
+		.site-content {
+    margin: 100px;
+    }
+
+		.post-navigation {
+			max-width: 900px;
+			margin: 0 auto;
+		}
+}
+
 
 /*--------------------------------------------------------------
 ## Header
@@ -966,6 +1020,7 @@ button.dropdown-toggle:hover {
 	font-style: italic;
 }
 
+
 @media screen and (max-width: 549px) {
 	.post figure {
 		display: block;
@@ -996,6 +1051,154 @@ button.dropdown-toggle:hover {
 article .post-thumbnail img {
 	max-height: 2em;
 }
+
+/* post navigation */
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation,
+.paging-navigation {
+	padding: 2em 0;
+	font-family: "Roboto Condensed", Arial, sans-serif;
+	text-align: left;
+	overflow: hidden;
+}
+
+.comment-navigation a,
+.posts-navigation a,
+.post-navigation a,
+.paging-navigation a {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	padding: .5em;
+	border: 1px solid #cccccc;
+	color: #262626;
+}
+
+.comment-navigation a:hover, .comment-navigation a:focus,
+.posts-navigation a:hover,
+.posts-navigation a:focus,
+.post-navigation a:hover,
+.post-navigation a:focus,
+.paging-navigation a:hover,
+.paging-navigation a:focus {
+	color: #262626;
+	/* border-color: #b51c35; */
+	background: #D9D9D9;
+}
+
+.nav-links {
+	margin: 0 auto;
+	padding: 0 .4em;
+}
+
+.nav-previous {
+	padding-bottom: 1em;
+}
+
+@media screen and (min-width: 900px) {
+	.nav-links {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: stretch;
+		    -ms-flex-align: stretch;
+		        align-items: stretch;
+		padding: 0;
+	}
+	.comment-navigation .nav-previous,
+	.comment-navigation .nav-next,
+	.posts-navigation .nav-previous,
+	.posts-navigation .nav-next,
+	.post-navigation .nav-previous,
+	.post-navigation .nav-next {
+		float: left;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: stretch;
+		    -ms-flex-align: stretch;
+		        align-items: stretch;
+		width: 48%;
+	}
+	.comment-navigation .nav-next,
+	.posts-navigation .nav-next,
+	.post-navigation .nav-next {
+		float: right;
+		text-align: right;
+	}
+	.nav-previous {
+		padding-bottom: 0;
+	}
+}
+
+.post-navigation .meta-nav {
+	display: block;
+}
+
+@media screen and (min-width: 30em) {
+	.post-navigation {
+		padding-bottom: 1em;
+	}
+}
+
+.post-navigation .post-title {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.post-navigation a:hover .post-title,
+.post-navigation a:focus .post-title {
+	border-bottom-color: white;
+}
+
+.pagination {
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.pagination .nav-links {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+.pagination a,
+.pagination span {
+	padding: .5em 1em;
+	background: white;
+}
+
+.pagination a {
+	text-decoration: none;
+}
+
+.pagination a:focus, .pagination a:hover {
+	color: white;
+	background: #b51c35;
+}
+
+.pagination .current {
+	font-weight: 600;
+	color: #b51c35;
+}
+
+.pagination .prev .icon {
+	margin-right: 1em;
+}
+
+.pagination .next .icon {
+	margin-left: 1em;
+}
+
 
 /* About page */
 
