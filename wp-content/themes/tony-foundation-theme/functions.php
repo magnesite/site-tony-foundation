@@ -144,6 +144,8 @@ function tonyfoundation_scripts() {
 
 				wp_enqueue_script( 'tonyfoundation-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
 
+				wp_enqueue_script( 'tonyfoundation-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20182227', true );
+
 				wp_localize_script('tonyfoundation-navigation', 'tonyfoundationScreenReaderText', array (
             'expand' => __('Expand child menu', 'tonyfoundation'),
             'collapse' => __('Collapse child menu', 'tonyfoundation')
