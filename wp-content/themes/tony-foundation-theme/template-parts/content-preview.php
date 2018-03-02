@@ -9,10 +9,10 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php tonyfoundation_post_thumbnail('tonyfoundation-feature'); ?>
-	<header class="entry-header">
-		<div class="entry-meta">
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php the_post_thumbnail('tonyfoundation-preview'); ?>
+	<div class="preview-text-wrapper">
+		<div class="entry-meta preview">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -22,18 +22,18 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
 		<?php
 			tonyfoundation_posted_on();
 			// tonyfoundation_posted_by();
 		?>
-	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+		</div><!-- .entry-meta -->
 		<?php
-			the_content( sprintf(
+		endif; ?>
+
+	<div class="entry-content preview">
+		<?php
+			the_excerpt( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'tonyfoundation' ),
@@ -53,4 +53,6 @@
 		?>
 	</div><!-- .entry-content -->
 
-</article><!-- #post-<?php the_ID(); ?> -->
+	</div><!--preview-text-wrapper-->
+
+</div><!-- #post-<?php the_ID(); ?> -->

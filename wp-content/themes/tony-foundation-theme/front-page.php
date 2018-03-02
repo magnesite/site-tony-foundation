@@ -59,7 +59,7 @@ get_header(); ?>
 			</div><!--site-features-wrapper-->
 
 			<section class="sticky-posts-wrapper">
-				<!-- create a new WP query for sticky posts -->
+
 				<?php $sticky_posts = get_option( 'sticky_posts' );
 					$args = array(
 						'posts_per_page' => 4,
@@ -69,43 +69,21 @@ get_header(); ?>
 					$sticky_query = new WP_Query( $args );
 				?>
 
-				<!-- create a WP loop that uses sticky template -->
-
 				<?php while ( $sticky_query->have_posts() ) : $sticky_query->the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-					<div class="post-thumbnail-wrapper">
-						<?php tonyfoundation_post_thumbnail(); ?>
-						<?php
-							the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-						if ( 'post' === get_post_type() ) : ?><?php endif; ?>
-					</div><!--post-thumbnail-wrapper-->
-
-					<div class="entry-excerpt">
-						<?php
-							the_excerpt();
-						?>
-					</div><!-- .entry-content -->
-
-					<div class="continue-reading">
-						<?php
-						$read_more_link = sprintf(
-							wp_kses(
-								/* translators: %s: Name of current post. Only visible to screen readers */
-								__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'tonyfoundation' ),
-								array(
-									'span' => array(
-										'class' => array(),
-									),
-								)
-							),
-							get_the_title()
-						);
-						?>
-						<a href="<?php esc_url( get_permalink() ) ?> rel='bookmark'"><?php echo $read_more_link; ?></a>
-					</div><!-- .continue-reading -->
-
-				</article><!-- #post-<?php the_ID(); ?> -->
+				<div class="post-thumbnail-wrapper">
+					<a href="<?php the_permalink($post->ID) ?>" class="post-thumbnail-link">
+						<div <?php post_class(); ?> >
+							<?php tonyfoundation_post_thumbnail(); ?>
+							<div class="entry-title">
+							<?php
+								the_title( '<h2></h2>' ); ?> <!--fix the problem here-->
+							</div><!--entry-title-->
+							<?php
+								the_excerpt('<p class="entry-excerpt"></p>' );?> 
+						</div><!--all-the-post-classes-->
+					</a><!--post-thumbnail-link-->
+				</div><!--post-thumbnail-wrapper-->
 
 				<?php endwhile;?>
 

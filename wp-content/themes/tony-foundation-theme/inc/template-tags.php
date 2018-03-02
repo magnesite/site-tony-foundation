@@ -123,7 +123,7 @@ function tonyfoundation_post_thumbnail() {
 	}
 
  	echo '<div class="post-thumbnail">'; ?>
-	<?php the_post_thumbnail(); ?>
+	<?php the_post_thumbnail('tonyfoundation-feature'); ?>
 	<?php echo '</div><!-- .post-thumbnail -->';
 }
 

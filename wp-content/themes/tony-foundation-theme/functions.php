@@ -41,10 +41,13 @@ if ( ! function_exists( 'tonyfoundation_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'tonyfoundation-feature', 1000, 400, true );
+		add_image_size( 'tonyfoundation-preview', 300, 300, true );
+		add_image_size( 'tonyfoundation-sticky', 400, 300, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'tonyfoundation' ),
+			'primary' => esc_html__( 'Site Header', 'tonyfoundation' ),
 		) );
 
 		/*
@@ -53,8 +56,6 @@ if ( ! function_exists( 'tonyfoundation_setup' ) ) :
 		 */
 		add_theme_support( 'html5', array(
 			'search-form',
-			'comment-form',
-			'comment-list',
 			'gallery',
 			'caption',
 		) );
@@ -192,7 +193,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // require get_template_directory() . '/inc/icon-functions.php';
 
 // Admin panel customization
-// Change placeholder text in the post editor for the aboutsection post type
+
+  // Change placeholder text in the post editor for the aboutsection post type
 add_filter( 'enter_title_here', function( $title ) {
     $screen = get_current_screen();
 

@@ -2,7 +2,7 @@
 /**
  * Template Name: Get Support
  * @package Tony_Foundation
- * Template Post Type: custompage
+ * Template Post Type: tfcustompage
  */
 
 get_header(); ?>
