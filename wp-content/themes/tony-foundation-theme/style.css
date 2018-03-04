@@ -1076,8 +1076,8 @@ div.type-post {
 	display: flex;
 	max-height: 300px;
 	margin: 2em 0;
-
 }
+
 .post img.size-tonyfoundation-preview {
 	border: none;
 	box-shadow: none;
@@ -1322,19 +1322,34 @@ div.type-post {
 /* About page */
 
 .about-hero-wrapper {
+	margin: -2em -2em 2em -2em;
 	background-color: #D9D9D9;
-	display: inline-block;
-	width: 100%;
+	display: block;
 	text-align: center;
+	width: 100vw;
 }
 
 .about-hero-wrapper img {
-	max-width: 80%;
+	display: block;
 }
 
-#mission {
-	margin-top: 150px;
+.cancer-color-band {
+	display: block;
 }
+
+.cancer-name, .cancer-color {
+	display: none;
+}
+
+.cancer-name:hover, .cancer-color:hover {
+	display: relative;
+}
+
+.cancer-color-band polygon:hover, .cancer-color-band polygon:focus {
+	stroke-width: 1;
+	stroke: yellow;
+}
+
 
 .about-section {
 	margin: 10%;

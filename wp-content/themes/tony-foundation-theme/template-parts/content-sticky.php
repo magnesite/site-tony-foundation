@@ -11,7 +11,7 @@
 
 <!-- wordpress will add the class 'sticky' to article element when user sets post visibility to sticky -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php tonyfoundation_post_thumbnail(); ?>
+	<?php tonyfoundation_post_thumbnail('tonyfoundation-sticky'); ?>
 	<header class="entry-header">
 		<div class="entry-meta">
 		<?php

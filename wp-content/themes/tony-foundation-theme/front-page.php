@@ -80,7 +80,7 @@ get_header(); ?>
 								the_title( '<h2></h2>' ); ?> <!--fix the problem here-->
 							</div><!--entry-title-->
 							<?php
-								the_excerpt('<p class="entry-excerpt"></p>' );?> 
+								the_excerpt('<p class="excerpt-text"></p>' );?> 
 						</div><!--all-the-post-classes-->
 					</a><!--post-thumbnail-link-->
 				</div><!--post-thumbnail-wrapper-->

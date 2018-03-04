@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php tonyfoundation_post_thumbnail(); ?>
+	<?php tonyfoundation_post_thumbnail(''); ?>
 	<header class="entry-header">
 		<div class="entry-meta">
 		<?php
