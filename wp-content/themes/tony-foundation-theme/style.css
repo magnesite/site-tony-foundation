@@ -281,7 +281,6 @@ textarea {
     optgroup,
     textarea {
 	font-size: 22px;
-	color: green;
 	font-size: 1.4rem;
     }
 }
@@ -294,7 +293,6 @@ textarea {
     optgroup,
     textarea {
 	font-size: 22px;
-	color: purple;
 	font-size: 1.4rem;
     }
 }
@@ -577,9 +575,10 @@ a:hover {
 --------------------------------------------------------------*/
 .main-navigation {
     display: block;
+		position: relative;
     font-family: 'Roboto Condensed', sans-serif;
     clear: left;
-		background-color: orange;
+		margin-bottom: 1em;
 }
 
 .main-navigation ul {
@@ -588,16 +587,14 @@ a:hover {
 	margin: 0;
 	padding-left: 0;
 	line-height:	normal;
-	background-color: yellow;
 }
 
 .main-navigation ul a {
 	color: #262626;
-	background-color: blue;
 }
 
 .main-navigation ul ul {
-	display: none;
+	/* display: none; */
 	top: 1.5em;
 	z-index: 99999;
 }
@@ -606,9 +603,9 @@ a:hover {
 	top: 0;
 }
 
-.main-navigation ul ul li {
+/* .main-navigation ul ul li {
 	padding-left: 1em;
-}
+} */
 
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
@@ -626,13 +623,12 @@ a:hover {
 
 .main-navigation li {
 	position: relative;
-	background-color: green;
 }
 
 .main-navigation a {
 	display: inline-block;
 	width: 100%;
-	padding: .5em 1em .5em 0;
+	padding: 1em;
 	text-decoration: none;
 	color: #fff;
 }
@@ -655,17 +651,36 @@ a:hover {
 
 .menu-toggle {
 	position: absolute;
-	top: 1.1em;
-	right: 1.1em;
-
+  height: 1em;
+  right: 1.1em;
+  top: -3em;
 }
 
+.menu-item-has-children a {
+	padding-bottom: 0;
+}
+
+ul.sub-menu li a {
+	font-weight: 200;
+  font-size: .9em;
+  padding: 5px 5px 5px 2em;
+}
+
+span.dropdown-symbol {
+    background: url('images/dropdown-symbol.svg') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+}
 button.dropdown-toggle {
+	display: none; /* this should be turned on for accessibility, but need to figure out styling w svg */
 	position: absolute;
-	right: 0;
-	color: #F2F2F2;
+	right: 1;
+	border: none;
+	background: inherit;
+	color: white;
 	line-height: 1.5em;
-	padding: .4em .5em .4em .5em;
+	padding: .4em 1em .4em .5em;
 }
 
 button.dropdown-toggle:hover {
@@ -676,9 +691,9 @@ button.dropdown-toggle:hover {
 .toggled-on ul,
 .sub-menu.toggled-on {
 	display: inline-block;
-	margin-top: .4em;
+	margin-top: .5em;
 	padding: 0 auto;
-	text-align: center;
+	text-align: left;
 	width: 100%;
 }
 
@@ -689,6 +704,11 @@ button.dropdown-toggle:hover {
 @media screen and (min-width: 600px) {
 	.menu-toggle {
 		display: none;
+	}
+
+	li:hover > ul,
+	li:focus > ul {
+		display: block;
 	}
 
 	.main-navigation ul {
@@ -703,6 +723,7 @@ button.dropdown-toggle:hover {
 	  margin-bottom: 0px;
 	}
 	.main-navigation ul ul {
+		display: none;
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-ms-flex-direction: column;
@@ -722,6 +743,7 @@ button.dropdown-toggle:hover {
 
 	.main-navigation ul ul li a {
 		background: none;
+		text-align: left;
 	}
 	.main-navigation ul li a {
 		padding: .4em 1em;
@@ -730,7 +752,7 @@ button.dropdown-toggle:hover {
 
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 900px) {
 	.main-navigation ul {
 		-webkit-box-pack: end;
 		-ms-flex-pack: end;
@@ -965,7 +987,7 @@ button.dropdown-toggle:hover {
 		}
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 900px) {
     .site-header {
         display: flex;
         justify-content: space-between;
@@ -1521,28 +1543,9 @@ ul.mission li {
 .footer-section-wrapper {
 	padding: 1em;
 	margin: 0 .5em;
+	flex: 0 0 auto;
 }
 
-.mc-field-group {
-	color: white;
-}
-
-
-#mc_embed_signup .subscribe {
-	font-weight: 400;
-  padding: 0;
-  margin: 15px 0;
-	color: white;
-	font-size: 14px;
-}
-
-#mc_embed_signup .clear {
-	margin-top: .5em;
-}
-
-#mc_embed_signup form {
-	margin: 0 auto;
-}
 
 /*--------------------------------------------------------------
 ## Comments

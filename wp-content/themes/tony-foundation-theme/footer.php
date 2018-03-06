@@ -16,11 +16,11 @@
 	<footer class="site-footer">
 		<div class="footer-section-wrapper">
 			<!-- Begin MailChimp Signup Form -->
-				<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+				<!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"> -->
 				<div id="mc_embed_signup">
 					<form action="https://wordpress.us17.list-manage.com/subscribe/post?u=33f69fccbfedf2f974900f158&amp;id=362de29c61" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<div id="mc_embed_signup_scroll">
-							<h2 class="subscribe">Subscribe to our mailing list!</h2>
+							<h2 class="subscribe">Join our mailing list!</h2>
 								<div class="mc-field-group">
 									<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
 									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">

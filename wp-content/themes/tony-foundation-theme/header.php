@@ -17,6 +17,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
+
+	<!-- temporary call to local jquery for local dev -->
+	<?php wp_enqueue_script("jquery"); ?>
+	
 	<?php wp_head(); ?>
 </head>
 
@@ -37,7 +41,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<img class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/3lines.png"/>
+			<svg class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" viewBox="0 0 27 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M26.611,0.628c0,-0.347 -0.281,-0.628 -0.628,-0.628l-25.355,0c-0.347,0 -0.628,0.281 -0.628,0.628l0,1.257c0,0.346 0.281,0.628 0.628,0.628l25.355,0c0.347,0 0.628,-0.282 0.628,-0.628l0,-1.257Z" style="fill:#595959;"/><path d="M26.611,7.699c0,-0.346 -0.281,-0.628 -0.628,-0.628l-25.355,0c-0.347,0 -0.628,0.282 -0.628,0.628l0,1.257c0,0.346 0.281,0.628 0.628,0.628l25.355,0c0.347,0 0.628,-0.282 0.628,-0.628l0,-1.257Z" style="fill:#595959;"/><path d="M26.611,14.771c0,-0.347 -0.281,-0.629 -0.628,-0.629l-25.355,0c-0.347,0 -0.628,0.282 -0.628,0.629l0,1.256c0,0.347 0.281,0.628 0.628,0.628l25.355,0c0.347,0 0.628,-0.281 0.628,-0.628l0,-1.256Z" style="fill:#595959;"/></g></svg>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
