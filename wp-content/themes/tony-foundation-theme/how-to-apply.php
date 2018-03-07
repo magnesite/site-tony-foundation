@@ -2,7 +2,7 @@
 /**
  * Template Name: How To Apply
  * @package Tony_Foundation
- * Template Post Type: custompage
+ * Template Post Type: tfcustompage
  */
 
 get_header(); ?>

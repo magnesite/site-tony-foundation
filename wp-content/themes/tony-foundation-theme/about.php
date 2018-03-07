@@ -105,7 +105,7 @@ get_header(); ?>
 								<?php
 									the_title( '<h2 class="person-name"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>');
 									echo '<h3 class="person-title">';
-									echo get_post_meta($post->ID, 'title', true);
+									echo get_post_meta($post->ID, 'person-title', true);
 									echo '</h3>';?>
 
 					</div><!--profile-wrapper-->
