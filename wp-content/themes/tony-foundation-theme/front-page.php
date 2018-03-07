@@ -71,19 +71,18 @@ get_header(); ?>
 
 				<?php while ( $sticky_query->have_posts() ) : $sticky_query->the_post(); ?>
 
-				<div class="post-thumbnail-wrapper">
-					<a href="<?php the_permalink($post->ID) ?>" class="post-thumbnail-link">
-						<div <?php post_class(); ?> >
-							<?php tonyfoundation_post_thumbnail(); ?>
-							<div class="entry-title">
-							<?php
-								the_title( '<h2></h2>' ); ?> <!--fix the problem here-->
-							</div><!--entry-title-->
-							<?php
-								the_excerpt('<p class="excerpt-text"></p>' );?> 
-						</div><!--all-the-post-classes-->
-					</a><!--post-thumbnail-link-->
-				</div><!--post-thumbnail-wrapper-->
+
+					<div <?php post_class(array('post-thumbnail-wrapper', 'sticky')); ?> >
+						<a href="<?php the_permalink($post->ID) ?>" class="post-thumbnail-link">
+							<?php the_post_thumbnail('tonyfoundation-sticky'); ?>
+						</a><!--post-thumbnail-link-->
+						<div class="title-wrapper">
+							<?php the_title( '<h2></h2>' ); ?>
+						</div><!--title-wrapper-->
+						<?php
+							the_excerpt('<p class="excerpt-text"></p>' );?>
+					</div><!--all-the-post-classes post-thumbnail-wrapper-->
+
 
 				<?php endwhile;?>
 

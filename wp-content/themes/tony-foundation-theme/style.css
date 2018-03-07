@@ -1316,60 +1316,52 @@ div.type-post {
 /* sticky post thumbnails */
 
 .sticky-posts-wrapper {
-	display: block;
-	margin: 0 auto;
-	margin-top: 2em;
+	display: flex;
+  flex-flow: row wrap;
 }
 
-@media screen and (min-width: 700px) {
-	.sticky-posts-wrapper {
-		display: flex;
-		justify-content: center;
-	}
-}
-
-.post-thumbnail-wrapper {
+.post-thumbnail-wrapper.sticky {
 	background-color: #D9D9D9;
 	max-width: 350px;
   margin: 1em auto;
+	display: flex;
+	flex-flow: column nowrap;
+	max-height: none;
 }
 
-/* @media screen and (min-width: 700px) {
-	article.sticky {
-		justify-content: center;
-	}
-} */
+.post-thumbnail-wrapper.sticky .post-thumbnail-link {
+	display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+}
 
-.post-thumbnail-wrapper .post-thumbnail img {
+.post-thumbnail-wrapper.sticky .post-thumbnail-link img {
 	width: 100%;
 	border: none;
 	box-shadow: none;
 }
 
-.post-thumbnail-link {
-	text-decoration: none;
-	display: inline-block;
-}
-
-.post-thumbnail-link .entry-title {
-	background-color: #666666bf;
-	display: block;
-}
-
-.sticky .entry-title h2 {
-	color: white;
-	font-weight: 400;
-	padding: 1em;
-}
-
- .post-thumbnail-wrapper .entry-excerpt {
-	margin-top: 0;
-	font-size: .8em;
+.post-thumbnail-wrapper.sticky .title-wrapper {
+	position: relative;
+  bottom: 3em;
+  color: #F2F2F2;
+  background-color: #666666c4;
   padding: 1em;
+  height: 3em;
+	font-family: 'Roboto Slab', serif;
 }
 
-.post-thumbnail-wrapper .entry-excerpt p {
- margin: 0;
+.sticky .title-wrapper h2 {
+	display: inline-block;
+	font-size: 1.2em;
+	font-weight: 600;
+	margin: auto;
+}
+
+.post-thumbnail-wrapper p {
+ margin: 1.5em;
+ margin-top: -1em;
+ font-size: .8em;
 }
 
 
@@ -1527,6 +1519,7 @@ ul.mission li {
 .site-features-wrapper {
 	display: block;
 	width: 100%;
+	margin-bottom: 1em;
 }
 
 .site-feature {
