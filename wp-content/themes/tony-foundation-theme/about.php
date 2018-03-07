@@ -92,66 +92,27 @@ get_header(); ?>
 			<section id="leadership" class="about-section">
 				<h1>Our Leadership</h1>
 
-				<div class="profile-wrapper">
+			<div class="profile-list-wrapper">
 
-				<div class="leader-profile">
+					<?php $people_query = new WP_Query( array( 'post_type' => 'tfpeople' ) ); ?>
 
-					<img src="<?php echo get_template_directory_uri() . '/images/leader-photo-placeholder.png'; ?>"></img>
-					<h2>Tony Ladaudio</h2>
-					<h3>President</h3>
-					<p>Bacon ipsum dolor amet shankle dolore fatback velit pork chop anim officia.</p>
-				</div><!--leader-profile-->
+					<?php while ( $people_query->have_posts() ) : $people_query->the_post(); ?>
 
-				<div class="leader-profile">
-					<img src="<?php echo get_template_directory_uri() . '/images/leader-photo-placeholder.png'; ?>"></img>
-					<h2>Scott Patterson</h2>
-					<h3>Vice President</h3>
-					<p>Bacon ipsum dolor amet shankle dolore fatback velit pork chop anim officia.</p>
-				</div><!--leader-profile-->
+					<div class="profile-wrapper">
+						<a href="<?php the_permalink($post->ID) ?>" class="post-thumbnail-link">
+								<?php the_post_thumbnail('tonyfoundation-person', array('class' => 'circle-image')); ?>
+						</a><!--post-thumbnail-link-->
+								<?php
+									the_title( '<h2 class="person-name"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>');
+									echo '<h3 class="person-title">';
+									echo get_post_meta($post->ID, 'title', true);
+									echo '</h3>';?>
 
-				<div class="leader-profile">
-					<img src="<?php echo get_template_directory_uri() . '/images/leader-photo-placeholder.png'; ?>"></img>
-					<h2>Hailey Pate</h2>
-					<h3>Secretary and Technology Advisor</h3>
-					<p>Bacon ipsum dolor amet shankle dolore fatback velit pork chop anim officia.</p>
-				</div><!--leader-profile-->
+					</div><!--profile-wrapper-->
 
-				<div class="leader-profile">
-					<img src="<?php echo get_template_directory_uri() . '/images/leader-photo-placeholder.png'; ?>"></img>
-					<h2>Tony Aguilar</h2>
-					<h3>Treasurer and Director of Accounting</h3>
-					<p>Bacon ipsum dolor amet shankle dolore fatback velit pork chop anim officia.</p>
-				</div><!--leader-profile-->
+					<?php endwhile;?>
 
-				<div class="leader-profile">
-					<img src="<?php echo get_template_directory_uri() . '/images/leader-photo-placeholder.png'; ?>"></img>
-					<h2>Kristine Devine</h2>
-					<h3>Legal Advisor</h3>
-					<p>Bacon ipsum dolor amet shankle dolore fatback velit pork chop anim officia.</p>
-				</div><!--leader-profile-->
-
-				<div class="leader-profile">
-					<img src="<?php echo get_template_directory_uri() . '/images/leader-photo-placeholder.png'; ?>"></img>
-					<h2>Tim Ladaudio</h2>
-					<h3>Business Advisor</h3>
-					<p>Bacon ipsum dolor amet shankle dolore fatback velit pork chop anim officia.</p>
-				</div><!--leader-profile-->
-
-				<div class="leader-profile">
-					<img src="<?php echo get_template_directory_uri() . '/images/leader-photo-placeholder.png'; ?>"></img>
-					<h2>Scott Stager</h2>
-					<h3>Business Analyst</h3>
-					<p>Bacon ipsum dolor amet shankle dolore fatback velit pork chop anim officia.</p>
-				</div><!--leader-profile-->
-
-				<div class="leader-profile">
-					<img src="<?php echo get_template_directory_uri() . '/images/leader-photo-placeholder.png'; ?>"></img>
-					<h2>William Hamner</h2>
-					<h3>Accounting Advisor</h3>
-					<p>Bacon ipsum dolor amet shankle dolore fatback velit pork chop anim officia.</p>
-				</div><!--leader-profile-->
-
-				</div><!--profile-wrapper-->
+				</div><!--profile-list-wrapper-->
 			</section>
 
 

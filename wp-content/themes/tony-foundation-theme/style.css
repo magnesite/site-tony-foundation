@@ -467,9 +467,11 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: none;
+	border: solid;
+	border-width: 2px;
+	border-color: #F2F2F2;
 	background: transparent;
-	color: #000000;
+	color: #F2F2F2;
 	font-size: 1em;
 	font-size: 0.75rem;
 	line-height: 1;
@@ -921,6 +923,12 @@ button.dropdown-toggle:hover {
 		}
 }
 
+.circle-image {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+}
 
 /*--------------------------------------------------------------
 ## Header
@@ -1449,6 +1457,29 @@ ul.mission li {
 	font-size: .8em;
 }
 
+article.tfpeople header {
+	text-align: center;
+}
+
+article.tfpeople header img {
+	max-width: 200px;
+}
+
+article.tfpeople header h1, article.tfpeople .entry-content {
+	margin: 0;
+	padding-top: 0;
+}
+
+@media screen and (min-width: 600px) {
+	article.tfpeople {
+		display: flex;
+	}
+
+	article.tfpeople header h1, article.tfpeople header h2 {
+		font-size: 1.2em;
+	}
+}
+
 /* DONATION PAGE */
 .donation-form-wrapper {
 	margin: -3em;
@@ -1538,13 +1569,92 @@ ul.mission li {
 	background-color: #666666;
 	display: flex;
 	font-size: .7em;
+	color: #F2F2F2;
+	padding-top: 15px;
 }
 
 .footer-section-wrapper {
 	padding: 1em;
 	margin: 0 .5em;
-	flex: 0 0 auto;
+	width: 33%;
+	text-align: center;
 }
+
+footer .right {
+	text-align: right;
+}
+
+footer .social-wrapper {
+	margin-top: 5px;
+}
+
+footer .social-wrapper svg {
+	display: inline-block;
+	fill: currentColor;
+	height: 2em;
+	position: relative;
+	/* Align more nicely with capital letters */
+	vertical-align: middle;
+	width: 2em;
+}
+
+.social-wrapper a {
+	margin: 1em;
+}
+
+.site-footer button {
+	border: solid;
+	border-width: 2px;
+	border-color: #F2F2F2;
+	background: transparent;
+	color: #F2F2F2;
+	font-size: 1.2em;
+	line-height: 1;
+	padding: .5em .7em;
+
+}
+
+.site-footer .list-header {
+	margin: 0 0 .1em 0;
+	font-size: 1.2em;
+	vertical-align: top;
+	text-align: left;
+}
+
+.site-footer .page-list {
+	list-style: none;
+	padding: 0;
+	vertical-align: top;
+	text-align: left;
+}
+
+.site-footer .page-list li {
+	margin: .1em;
+}
+
+.site-footer .page-list li a {
+	color: #F2F2F2;
+	text-decoration: none;
+	font-weight: 200;
+}
+
+.site-footer .legal-wrapper {
+	font-size: 11px;
+	font-weight: 200;
+	margin-top: 3em;
+}
+
+.site-footer .copyright-notice {
+	margin-bottom: 0;
+}
+
+.site-footer .legal-wrapper a {
+	color: #F2F2F2;
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 11px;
+}
+
 
 
 /*--------------------------------------------------------------

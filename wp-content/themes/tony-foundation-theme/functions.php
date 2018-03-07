@@ -44,6 +44,16 @@ if ( ! function_exists( 'tonyfoundation_setup' ) ) :
 		add_image_size( 'tonyfoundation-feature', 1000, 400, true );
 		add_image_size( 'tonyfoundation-preview', 300, 300, true );
 		add_image_size( 'tonyfoundation-sticky', 400, 300, true );
+		add_image_size( 'tonyfoundation-person', 300, 300, true );
+
+		add_filter( 'image_size_names_choose', 'tonyfoundation_custom_sizes' );
+
+		function tonyfoundation_custom_sizes( $sizes ) {
+    	return array_merge( $sizes, array(
+        'tonyfoundation-person' => __( 'Person Photo' ),
+				'tonyfoundation-feature' => __( 'Post Feature Image' )
+    	) );
+		}
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
