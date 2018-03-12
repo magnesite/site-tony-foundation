@@ -576,10 +576,9 @@ a:hover {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-    display: block;
-		position: relative;
+    display: flex;
+		flex-flow: column nowrap;
     font-family: 'Roboto Condensed', sans-serif;
-    clear: left;
 		margin-bottom: 1em;
 }
 
@@ -650,11 +649,19 @@ a:hover {
 	margin-right: 0;
 }
 
+/* .super-menu {
+	display: none;
+} */
+
 .menu-toggle {
+	height: 1em;
 	position: absolute;
-  height: 1em;
-  right: 1.1em;
-  top: -3em;
+	right: 30px;
+	top: 10px;
+}
+
+.menu-toggle.toggled-on {
+
 }
 
 .menu-item-has-children a {
@@ -933,8 +940,27 @@ button.dropdown-toggle:hover {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-    position: relative;
     font-family: "Roboto Slab", serif;
+		position: relative;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin-top: 10px;
+		padding: 0 1em;
+}
+
+.site-branding {
+		text-align: left;
+		flex: 1 0 auto;
+		/* margin: 1em 60px 0 1em; */
+}
+
+.custom-logo-text {
+	padding-top: 5px;
+  display: inline-block;
+}
+.custom-logo-link img {
+	max-width: 25px;
 }
 
 .header-image {
@@ -943,14 +969,9 @@ button.dropdown-toggle:hover {
     max-height: 60vh;
 }
 
-.site-branding {
-    /* min-height: 65px; */
-    text-align: left;
-		margin: 1em 60px 0 1em;
-}
-
 .site-title {
     padding: 0;
+		margin: 0;
     font-size: 24px;
 		font-size: 1.1em;
     font-weight: 400;
@@ -980,8 +1001,24 @@ button.dropdown-toggle:hover {
     font-size: 0.8em;
 } */
 
-.custom-logo {
-    max-width: 30px;
+a.subscribe-button {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1em;
+	padding: .3em;
+	text-transform: uppercase;
+	font-variant: small-caps;
+	border-style: solid;
+	border-width: 2px;
+}
+
+a.donate-button {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1em;
+	padding: .3em;
+	text-transform: uppercase;
+	font-variant: small-caps;
+	border-style: solid;
+	border-width: 2px;
 }
 
 @media screen and (min-width: 600px) {
@@ -997,12 +1034,12 @@ button.dropdown-toggle:hover {
 @media screen and (min-width: 900px) {
     .site-header {
         display: flex;
+				flex-flow: row wrap;
         justify-content: space-between;
     }
     .site-branding {
         text-align: left;
-        width: 40%;
-        flex: 1 0 auto;
+        flex: 1 0 30%;
     }
 		.site-title {
 			margin: 0;
@@ -1369,32 +1406,55 @@ div.type-post {
 
 .about-hero-wrapper {
 	margin: -2em -2em 2em -2em;
-	background-color: #D9D9D9;
 	display: block;
 	text-align: center;
 	width: 100vw;
 }
 
 .about-hero-wrapper img {
-	display: block;
+	width: 60%;
+display: inline;
+position: relative;
+right: 30%;
+}
+
+.about-hero-wrapper figcaption {
+	line-height: normal;
+    font-style: normal;
+    font-size: 1em;
+    font-weight: 200;
+    position: relative;
+    bottom: 7em;
+    width: 60%;
+    left: 6em;
+}
+
+.about-hero-wrapper .source {
+	font-size: .8em;
+	display: inline-block;
+}
+
+.explore-colors {
+	padding: .4em;
+color: #666666;
+position: relative;
+bottom: 11em;
+left: 5em;
+background-color: #9DD2E1;
+font-size: .7em;
 }
 
 .cancer-color-band {
-	display: block;
+	position: relative;
+	bottom: 7em;
 }
 
-.cancer-name, .cancer-color {
-	display: none;
+@media screen and (min-width: 900px) {
+	.about-hero-wrapper {
+		margin: -100px -100px 1em -100px;
+	}
 }
 
-.cancer-name:hover, .cancer-color:hover {
-	display: relative;
-}
-
-.cancer-color-band polygon:hover, .cancer-color-band polygon:focus {
-	stroke-width: 1;
-	stroke: yellow;
-}
 
 
 .about-section {

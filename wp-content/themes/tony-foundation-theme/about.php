@@ -11,72 +11,147 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 				<div class="about-hero-wrapper">
-						<img src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/about-hero.png">
-							<svg class="cancer-color-band" width="1200" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-								<g transform="scale(1.1)">
-								<g transform="translate(10 0)"><polygon class="single" fill="#b8d147" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Lymphoma</text><text class="cancer-color">Lime</text></g>
-<g transform="translate(20 0)"><polygon class="single" fill="#ed5538" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Leukemia</text><text class="cancer-color">Orange</text></g>
-<g transform="translate(30 0)"><polygon class="single" fill="#fefffe" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Lung</text><text class="cancer-color">White</text></g>
-<g transform="translate(50 0)"><polygon class="double" fill="#8f90b4" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Testicular</text><text class="cancer-color">Orchid</text></g>
-<g transform="translate(70 0)"><polygon class="double" fill="#fcef34" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Sarcoma</text><text class="cancer-color">yellow</text></g>
-<g transform="translate(90 0)"><polygon class="double" fill="#db96aa" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Breast</text><text class="cancer-color">Pink</text></g>
-<g transform="translate(110 0)"><polygon class="double" fill="#1f9e49" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Gall Bladder &amp;  Bile Duct</text><text class="cancer-color">Kelly Green</text></g>
-<g transform="translate(120 0)"><polygon class="single" fill="#18706f" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Ovarian</text><text class="cancer-color">teal</text></g>
-<g transform="translate(140 0)"><polygon class="double" fill="#010001" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Melanoma</text><text class="cancer-color">black</text></g>
-<g transform="translate(150 0)"><polygon class="single" fill="#db96aa" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Breast</text><text class="cancer-color">Pink</text></g>
-<g transform="translate(160 0)"><polygon class="single" fill="#22269c" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Colon</text><text class="cancer-color">Dark Blue</text></g>
-<g transform="translate(180 0)"><polygon class="double" fill="#d9a474" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Childhood</text><text class="cancer-color">Gold</text></g>
-<g transform="translate(200 0)"><polygon class="double" fill="#FFFFFF" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Cervical</text><text class="cancer-color">Teal &amp; White</text></g>
-<g transform="translate(210 0)"><polygon class="single" fill="#fcef34" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Sarcoma</text><text class="cancer-color">yellow</text></g>
-<g transform="translate(220 0)"><polygon class="single" fill="#FFFFFF" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Carcinoid</text><text class="cancer-color">Zebra Stripe</text></g>
-<g transform="translate(230 0)"><polygon class="single" fill="#FFFFFF" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Head &amp; Neck</text><text class="cancer-color">Burgundy &amp; Ivory</text></g>
-<g transform="translate(240 0)"><polygon class="single" fill="#f1af92" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Uterine &amp; Endometrial</text><text class="cancer-color">Peach</text></g>
-<g transform="translate(260 0)"><polygon class="double" fill="#9695c7" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">All cancers</text><text class="cancer-color">Lavendar</text></g>
-<g transform="translate(270 0)"><polygon class="single" fill="#d9a474" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Childhood</text><text class="cancer-color">Gold</text></g>
-<g transform="translate(280 0)"><polygon class="single" fill="#f7ad31" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Appendix</text><text class="cancer-color">Amber</text></g>
-<g transform="translate(300 0)"><polygon class="double" fill="#ed5538" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Kidney</text><text class="cancer-color">Orange</text></g>
-<g transform="translate(310 0)"><polygon class="single" fill="#1f9e49" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Gall Bladder &amp;  Bile Duct</text><text class="cancer-color">Kelly Green</text></g>
-<g transform="translate(320 0)"><polygon class="single" fill="#9bd2e2" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Prostate</text><text class="cancer-color">Light Blue</text></g>
-<g transform="translate(330 0)"><polygon class="single" fill="#8f90b4" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Testicular</text><text class="cancer-color">Orchid</text></g>
-<g transform="translate(340 0)"><polygon class="single" fill="#aeaecd" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Esophageal &amp; Stomach</text><text class="cancer-color">Periwinkle</text></g>
-<g transform="translate(360 0)"><polygon class="double" fill="#8d399f" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Pancreatic</text><text class="cancer-color">Purple</text></g>
-<g transform="translate(370 0)"><polygon class="single" fill="#ed5538" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Kidney</text><text class="cancer-color">Orange</text></g>
-<g transform="translate(380 0)"><polygon class="single" fill="#8d399f" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Pancreatic</text><text class="cancer-color">Purple</text></g>
-<g transform="translate(390 0)"><polygon class="single" fill="#929294" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Brain</text><text class="cancer-color">Gray</text></g>
-<g transform="translate(400 0)"><polygon class="single" fill="#95323b" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Multiple Myeloma</text><text class="cancer-color">Burgundy</text></g>
-<g transform="translate(410 0)"><polygon class="single" fill="#693367" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Honors Caregivers</text><text class="cancer-color">Plum</text></g>
-<g transform="translate(430 0)"><polygon class="double" fill="#FFFFFF" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Thyroid</text><text class="cancer-color">Teal, Pink &amp; Blue</text></g>
-<g transform="translate(440 0)"><polygon class="single" fill="#FFFFFF" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Bladder</text><text class="cancer-color">Marigold, Purple &amp; Blue</text></g>
-<g transform="translate(450 0)"><polygon class="single" fill="#FFFFFF" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Cervical</text><text class="cancer-color">Teal &amp; White</text></g>
-<g transform="translate(460 0)"><polygon class="single" fill="#FFFFFF" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Thyroid</text><text class="cancer-color">Teal, Pink &amp; Blue</text></g>
-<g transform="translate(470 0)"><polygon class="single" fill="#562ebb" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Hodgkin's Lymphoma</text><text class="cancer-color">Violet</text></g>
-<g transform="translate(490 0)"><polygon class="double" fill="#b8d147" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Lymphoma</text><text class="cancer-color">Lime</text></g>
-<g transform="translate(510 0)"><polygon class="double" fill="#ed5538" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Leukemia</text><text class="cancer-color">Orange</text></g>
-<g transform="translate(530 0)"><polygon class="double" fill="#fefffe" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Lung</text><text class="cancer-color">White</text></g>
-<g transform="translate(550 0)"><polygon class="double" fill="#fcef34" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Bone</text><text class="cancer-color">yellow</text></g>
-<g transform="translate(570 0)"><polygon class="double" fill="#18706f" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Ovarian</text><text class="cancer-color">teal</text></g>
-<g transform="translate(580 0)"><polygon class="single" fill="#fefffe" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Lung</text><text class="cancer-color">White</text></g>
-<g transform="translate(600 0)"><polygon class="double" fill="#156a3c" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Liver</text><text class="cancer-color">Emerald Green</text></g>
-<g transform="translate(620 0)"><polygon class="double" fill="#22269c" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Colon</text><text class="cancer-color">Dark Blue</text></g>
-<g transform="translate(640 0)"><polygon class="double" fill="#FFFFFF" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Carcinoid</text><text class="cancer-color">Zebra Stripe</text></g>
-<g transform="translate(660 0)"><polygon class="double" fill="#FFFFFF" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Head &amp; Neck</text><text class="cancer-color">Burgundy &amp; Ivory</text></g>
-<g transform="translate(680 0)"><polygon class="double" fill="#aeaecd" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Esophageal &amp; Stomach</text><text class="cancer-color">Periwinkle</text></g>
-<g transform="translate(700 0)"><polygon class="double" fill="#8d399f" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Leiomyosarcoma</text><text class="cancer-color">Purple</text></g>
-<g transform="translate(720 0)"><polygon class="double" fill="#f1af92" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Uterine &amp; Endometrial</text><text class="cancer-color">Peach</text></g>
-<g transform="translate(740 0)"><polygon class="double" fill="#f7ad31" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Appendix</text><text class="cancer-color">Amber</text></g>
-<g transform="translate(750 0)"><polygon class="single" fill="#156a3c" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Liver</text><text class="cancer-color">Emerald Green</text></g>
-<g transform="translate(760 0)"><polygon class="single" fill="#9695c7" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">All cancers</text><text class="cancer-color">Lavendar</text></g>
-<g transform="translate(780 0)"><polygon class="double" fill="#9bd2e2" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Prostate</text><text class="cancer-color">Light Blue</text></g>
-<g transform="translate(790 0)"><polygon class="single" fill="#fcef34" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Bone</text><text class="cancer-color">yellow</text></g>
-<g transform="translate(800 0)"><polygon class="single" fill="#8d399f" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Leiomyosarcoma</text><text class="cancer-color">Purple</text></g>
-<g transform="translate(820 0)"><polygon class="double" fill="#95323b" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Multiple Myeloma</text><text class="cancer-color">Burgundy</text></g>
-<g transform="translate(830 0)"><polygon class="single" fill="#010001" points="0,30 10,30 20,0 10,0"/><text class="cancer-name">Melanoma</text><text class="cancer-color">black</text></g>
-<g transform="translate(850 0)"><polygon class="double" fill="#693367" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Honors Caregivers</text><text class="cancer-color">Plum</text></g>
-<g transform="translate(870 0)"><polygon class="double" fill="#929294" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Brain</text><text class="cancer-color">Gray</text></g>
-<g transform="translate(890 0)"><polygon class="double" fill="#FFFFFF" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Bladder</text><text class="cancer-color">Marigold, Purple &amp; Blue</text></g>
-<g transform="translate(910 0)"><polygon class="double" fill="#562ebb" points="0,30 20,30 30,0 10,0"/><text class="cancer-name">Hodgkin's Lymphoma</text><text class="cancer-color">Violet</text></g>
-</g>
-							</svg>
+						<figure><img src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/just-tony.png"/>
+							<figcaption>My cancer colors are orange and gray. <span class="source">- Tony Laudadio</span></figcaption>
+						</figure>
+						<a class="explore-colors">Explore more colors >></a>
+						<svg class="cancer-color-band" width="100%" height="100%" viewBox="0 0 920 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g id="colors">
+						  <g id="singles">
+						    <path id="single" d="M130,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#f7ad31;"/>
+						<path id="single1" d="M70,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#fcef34;"/>
+						<path id="single2" d="M840,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#fcef34;"/>
+						<path id="single3" d="M80,30l-10,0l10,-30l10,0l-10,30Z" style="fill:url(#_Linear1);"/>
+						<path id="single4" d="M140,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#22269c;"/>
+						<path id="single5" d="M40,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#d9a474;"/>
+						<path id="single6" d="M170,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#929294;"/>
+						<path id="single7" d="M200,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#95323b;"/>
+						<path id="single8" d="M210,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#8f90b4;"/>
+						<path id="single9" d="M220,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#156a3c;"/>
+						<path id="single10" d="M230,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#9bd2e2;"/>
+						<path id="single11" d="M260,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#18706f;"/>
+						<path id="single12" d="M290,30l-10,0l10,-30l10,0l-10,30Z" style="fill:url(#_Linear2);"/>
+						<path id="single13" d="M350,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#1f9e49;"/>
+						<path id="single14" d="M380,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#9695c7;"/>
+						<path id="single15" d="M420,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#693367;"/>
+						<path id="single16" d="M380,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#9695c7;"/>
+						<path id="single17" d="M410,30l-10,0l10,-30l10,0l-10,30Z" style="fill:url(#_Linear3);"/>
+						<path id="single18" d="M470,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#fefffe;"/>
+						<path id="single19" d="M500,30l-10,0l10,-30l10,0l-10,30Z" style="fill:url(#_Linear4);"/>
+						<path id="single20" d="M600,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#db96aa;"/>
+						<path id="single21" d="M570,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#ed5538;"/>
+						<path id="single22" d="M630,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#b8d147;"/>
+						<path id="single23" d="M660,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#8d399f;"/>
+						<path id="single24" d="M670,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#562ebb;"/>
+						<path id="single25" d="M700,30l-10,0l10,-30l10,0l-10,30Z" style="fill:url(#_Linear5);"/>
+						<path id="single26" d="M730,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#f1af92;"/>
+						<path id="single27" d="M300,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#aeaecd;"/>
+						<path id="single28" d="M310,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#ed5538;"/>
+						<path id="single29" d="M320,30l-10,0l10,-30l10,0l-10,30Z" style="fill:#010001;"/>
+						</g><g id="doubles"><path id="double" d="M880,30l-20,0l10,-30l20,0l-10,30Z" style="fill:url(#_Linear6);"/>
+						<path id="double1" d="M30,30l-20,0l5.103,-15.308l4.897,-14.692l20,0l-10,30Z" style="fill:#562ebb;"/>
+						<path id="double2" d="M10,30l-10,0l0,-30l20,0l-10,30Z" style="fill:#9695c7;"/>
+						<path id="double3" d="M60,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#fefffe;"/>
+						<path id="double4" d="M100,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#db96aa;"/>
+						<path id="double5" d="M830,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#693367;"/>
+						<path id="double6" d="M160,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#d9a474;"/>
+						<path id="double7" d="M190,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#b8d147;"/>
+						<path id="double8" d="M250,30l-20,0l10,-30l20,0l-10,30Z" style="fill:url(#_Linear7);"/>
+						<path id="double9" d="M280,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#fcef34;"/>
+						<path id="double10" d="M860,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#8d399f;"/>
+						<path id="double11" d="M340,30l-20,0l10,-30l20,0l-10,30Z" style="fill:url(#_Linear8);"/>
+						<path id="double12" d="M370,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#f1af92;"/>
+						<path id="double13" d="M400,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#f7ad31;"/>
+						<path id="double14" d="M490,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#9bd2e2;"/>
+						<path id="double15" d="M440,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#929294;"/>
+						<path id="double16" d="M460,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#1f9e49;"/>
+						<path id="double17" d="M520,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#95323b;"/>
+						<path id="double18" d="M540,30l-20,0l10,-30l20,0l-10,30Z" style="fill:url(#_Linear9);"/>
+						<path id="double19" d="M560,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#8d399f;"/>
+						<path id="double20" d="M900,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#d9a474;"/>
+						<path id="double21" d="M920,30l-20,0l10,-30l11,0l-1,30Z" style="fill:#9695c7;"/>
+						<path id="double22" d="M690,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#aeaecd;"/>
+						<path id="double23" d="M720,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#156a3c;"/>
+						<path id="MEL-double" serif:id="MEL double" d="M770,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#010001;"/>
+						<path id="double24" d="M750,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#fcef34;"/>
+						<path id="double25" d="M790,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#8f90b4;"/>
+						<path id="double26" d="M810,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#ed5538;"/>
+						<path id="double27" d="M120,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#ed5538;"/>
+						<path id="double28" d="M650,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#22269c;"/>
+						<path id="double29" d="M620,30l-20,0l10,-30l20,0l-10,30Z" style="fill:#9695c7;"/>
+						<path id="double30" d="M590,30l-20,0l10,-30l20,0l-10,30Z" style="fill:url(#_Linear10);"/>
+						</g></g><defs><linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(20,0,0,30,70,15)"><stop offset="0" style="stop-color:#db96aa;stop-opacity:1"/>
+						<stop offset="0.27" style="stop-color:#a58c9a;stop-opacity:1"/>
+						<stop offset="0.56" style="stop-color:#18706f;stop-opacity:1"/>
+						<stop offset="0.81" style="stop-color:#1f3d8e;stop-opacity:1"/>
+						<stop offset="1" style="stop-color:#22269c;stop-opacity:1"/>
+						</linearGradient><linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(20,0,0,30,280,15)"><stop offset="0" style="stop-color:#fefffe;stop-opacity:1"/>
+						<stop offset="0.03" style="stop-color:#b8b9b8;stop-opacity:1"/>
+						<stop offset="0.07" style="stop-color:#010001;stop-opacity:1"/>
+						<stop offset="0.15" style="stop-color:#fefffe;stop-opacity:1"/>
+						<stop offset="0.28" style="stop-color:#010001;stop-opacity:1"/>
+						<stop offset="0.35" style="stop-color:#fefffe;stop-opacity:1"/>
+						<stop offset="0.4" style="stop-color:#c6c6c6;stop-opacity:1"/>
+						<stop offset="0.45" style="stop-color:#010001;stop-opacity:1"/>
+						<stop offset="0.55" style="stop-color:#fefffe;stop-opacity:1"/>
+						<stop offset="0.65" style="stop-color:#101010;stop-opacity:1"/>
+						<stop offset="0.74" style="stop-color:#fefffe;stop-opacity:1"/>
+						<stop offset="0.78" style="stop-color:#505050;stop-opacity:1"/>
+						<stop offset="0.81" style="stop-color:#010001;stop-opacity:1"/>
+						<stop offset="0.88" style="stop-color:#fefffe;stop-opacity:1"/>
+						<stop offset="1" style="stop-color:#010001;stop-opacity:1"/>
+						</linearGradient><linearGradient id="_Linear3" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(20,0,0,30,400,15)"><stop offset="0" style="stop-color:#18706f;stop-opacity:1"/>
+						<stop offset="0.27" style="stop-color:#18706f;stop-opacity:1"/>
+						<stop offset="0.34" style="stop-color:#18706f;stop-opacity:1"/>
+						<stop offset="0.4" style="stop-color:#18706f;stop-opacity:1"/>
+						<stop offset="0.65" style="stop-color:#619d9c;stop-opacity:1"/>
+						<stop offset="1" style="stop-color:#fefffe;stop-opacity:1"/>
+						</linearGradient><linearGradient id="_Linear4" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(20,0,0,30,490,15)"><stop offset="0" style="stop-color:#f1af92;stop-opacity:1"/>
+						<stop offset="0.55" style="stop-color:#8d399f;stop-opacity:1"/>
+						<stop offset="1" style="stop-color:#22269c;stop-opacity:1"/>
+						</linearGradient><linearGradient id="_Linear5" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(20,0,0,30,690,15)"><stop offset="0" style="stop-color:#ffeede;stop-opacity:1"/>
+						<stop offset="0.24" style="stop-color:#e4beb5;stop-opacity:1"/>
+						<stop offset="0.55" style="stop-color:#a44e54;stop-opacity:1"/>
+						<stop offset="0.64" style="stop-color:#9e4249;stop-opacity:1"/>
+						<stop offset="0.73" style="stop-color:#98373f;stop-opacity:1"/>
+						<stop offset="1" style="stop-color:#95323b;stop-opacity:1"/>
+						</linearGradient><linearGradient id="_Linear6" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(30,0,0,30,860,15)"><stop offset="0" style="stop-color:#18706f;stop-opacity:1"/>
+						<stop offset="0.27" style="stop-color:#18706f;stop-opacity:1"/>
+						<stop offset="0.34" style="stop-color:#18706f;stop-opacity:1"/>
+						<stop offset="0.4" style="stop-color:#18706f;stop-opacity:1"/>
+						<stop offset="0.65" style="stop-color:#619d9c;stop-opacity:1"/>
+						<stop offset="1" style="stop-color:#fefffe;stop-opacity:1"/>
+						</linearGradient><linearGradient id="_Linear7" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(30,0,0,30,230,15)"><stop offset="0" style="stop-color:#ffeede;stop-opacity:1"/>
+						<stop offset="0.24" style="stop-color:#e4beb5;stop-opacity:1"/>
+						<stop offset="0.55" style="stop-color:#a44e54;stop-opacity:1"/>
+						<stop offset="0.64" style="stop-color:#9e4249;stop-opacity:1"/>
+						<stop offset="0.73" style="stop-color:#98373f;stop-opacity:1"/>
+						<stop offset="1" style="stop-color:#95323b;stop-opacity:1"/>
+						</linearGradient><linearGradient id="_Linear8" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(30,0,0,30,320,15)"><stop offset="0" style="stop-color:#f1af92;stop-opacity:1"/>
+						<stop offset="0.55" style="stop-color:#8d399f;stop-opacity:1"/>
+						<stop offset="1" style="stop-color:#22269c;stop-opacity:1"/>
+						</linearGradient><linearGradient id="_Linear9" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(30,0,0,30,520,15)"><stop offset="0" style="stop-color:#fefffe;stop-opacity:1"/>
+						<stop offset="0.03" style="stop-color:#b8b9b8;stop-opacity:1"/>
+						<stop offset="0.07" style="stop-color:#010001;stop-opacity:1"/>
+						<stop offset="0.15" style="stop-color:#fefffe;stop-opacity:1"/>
+						<stop offset="0.28" style="stop-color:#010001;stop-opacity:1"/>
+						<stop offset="0.35" style="stop-color:#fefffe;stop-opacity:1"/>
+						<stop offset="0.4" style="stop-color:#c6c6c6;stop-opacity:1"/>
+						<stop offset="0.45" style="stop-color:#010001;stop-opacity:1"/>
+						<stop offset="0.55" style="stop-color:#fefffe;stop-opacity:1"/>
+						<stop offset="0.65" style="stop-color:#101010;stop-opacity:1"/>
+						<stop offset="0.74" style="stop-color:#fefffe;stop-opacity:1"/>
+						<stop offset="0.78" style="stop-color:#505050;stop-opacity:1"/>
+						<stop offset="0.81" style="stop-color:#010001;stop-opacity:1"/>
+						<stop offset="0.88" style="stop-color:#fefffe;stop-opacity:1"/>
+						<stop offset="1" style="stop-color:#010001;stop-opacity:1"/>
+						</linearGradient><linearGradient id="_Linear10" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(30,0,0,30,570,15)"><stop offset="0" style="stop-color:#db96aa;stop-opacity:1"/>
+						<stop offset="0.27" style="stop-color:#a58c9a;stop-opacity:1"/>
+						<stop offset="0.56" style="stop-color:#18706f;stop-opacity:1"/>
+						<stop offset="0.81" style="stop-color:#1f3d8e;stop-opacity:1"/>
+						<stop offset="1" style="stop-color:#22269c;stop-opacity:1"/>
+						</linearGradient></defs></svg>
+
 
 				</div><!--hero-wrapper-->
 

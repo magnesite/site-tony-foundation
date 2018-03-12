@@ -51,7 +51,7 @@
 	masthead       = $( '#masthead' );
 	menuToggle     = masthead.find( '.menu-toggle' );
 	siteNavContain = masthead.find( '.main-navigation' );
-	siteNavigation = masthead.find( '.main-navigation > div > ul' );
+	siteNavigation = masthead.find( '.main-navigation > div > ul' ,'.main-navigation .super-menu');
 
 	// Enable menuToggle.
 	(function() {
