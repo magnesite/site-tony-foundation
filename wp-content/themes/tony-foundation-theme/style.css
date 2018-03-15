@@ -576,79 +576,54 @@ a:hover {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	width: 100%;
+	width: unset;
 	display: flex;
-	position: absolute;
 	flex-flow: column nowrap;
 	font-family: 'Roboto Condensed', sans-serif;
 	margin-bottom: 1em;
 	background-color: rgba(217,217,217,0.95);
-	z-index: 100;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-	line-height:	normal;
-}
-
-.main-navigation ul a {
-	color: #262626;
-}
-
-.main-navigation ul ul {
-	/* display: none; */
-	top: 1.5em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	top: 0;
-}
-
-/* .main-navigation ul ul li {
-	padding-left: 1em;
-} */
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-	margin-left: 2em;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	position: relative;
+	padding-top: 1.5em;
 }
 
 .main-navigation a {
 	display: inline-block;
 	text-decoration: none;
-	color: #fff;
+	flex: 0 1 auto;
+	padding: .5em;
+
 }
 
-.main-navigation a:hover,
-.main-navigation a:focus {
-	text-decoration: none;
+.main-navigation li {
+	display: flex;
+	flex-flow: column nowrap;
+	flex: 0 1 auto;
 }
 
-/* .main-navigation .menu-item-has-children,
-.main-navigation .page_item_has_children {
-	min-width: 218px;
-} */
+.main-navigation ul {
+	display: flex;
+	list-style: none;
+	flex-flow: column nowrap;
+	flex: 1 1 auto;
+	padding: 0 1em;
+	margin: 0;
+}
 
-.main-navigation .menu-item-has-children > a,
-.main-navigation .page_item_has_children > a {
-	margin-right: 0;
+.main-navigation ul.sub-menu {
+	padding: 0 2em;
+	margin: 0;
+}
+
+
+.main-navigation ul.sub-menu a {
+	font-weight: 200;
+}
+
+.main-navigation .menu-item-has-children {
+	margin: 0;
+}
+
+.main-navigation ul {
+	display: none;
 }
 
 .menu-toggle {
@@ -656,16 +631,7 @@ a:hover {
 	position: absolute;
 	right: 30px;
 	top: 10px;
-}
-
-.menu-item-has-children a, .page-item-has-children a {
-	padding-bottom: 0;
-}
-
-ul.sub-menu li a {
-	font-weight: 200;
-  font-size: .9em;
-  padding: 5px 5px 5px 2em;
+	background-color: transparent;
 }
 
 span.dropdown-symbol {
@@ -771,25 +737,7 @@ a.donate-link {
 /* Toggle small menu and children on */
 .toggled-on ul,
 .sub-menu.toggled-on {
-	display: inline-block;
-	margin-top: .5em;
-	padding-left: inherit;
-	padding: 0 auto;
-	text-align: left;
-
-}
-
-.toggled-on ul li {
-	margin: 0 auto;
-	padding: 1em;
-}
-
-.toggled-on .children li {
-	padding: .5em;
-}
-
-.children li a {
-	width: 100%;
+	display: flex;
 }
 
 .toggled-on .super-menu {
@@ -802,64 +750,65 @@ a.donate-link {
 
 @media screen and (min-width: 600px) {
 
-	.menu-toggle {
-		display: none;
-	}
-
-	li:hover > ul,
-	li:focus > ul {
-		display: block;
-	}
-
 	.main-navigation {
 		width: 100%;
+		font-size: 0.8em;
 		display: flex;
 		flex-flow: column nowrap;
 		font-family: 'Roboto Condensed', sans-serif;
 		margin-bottom: 1em;
-		padding: 0;
-		position: static;
 		background-color: transparent;
+		padding-top: 0;
+	}
+
+	.main-navigation a {
+		display: inline-block;
+		text-decoration: none;
+		flex: 0 1 auto;
+		padding: .5em;
+
+	}
+
+	.main-navigation li {
+		display: flex;
+		flex-flow: column nowrap;
+		flex: 0 1 auto;
+		position: relative;
+		margin: 0;
+		padding-bottom: 10px;
 	}
 
 	.main-navigation ul {
-		display: block;
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin-top: 0px;
-	  margin-bottom: 0px;
+		list-style: none;
+		flex-flow: row nowrap;
+		flex: 1 1 auto;
+		justify-content: space-evenly;
+		padding: 0 1em;
+		margin: 0;
 	}
-	.main-navigation ul ul {
+
+	.main-navigation ul.sub-menu {
 		display: none;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		background: #F2F2F2;
-		margin-left: 0;
+	}
+
+	.main-navigation li:hover > ul.sub-menu,
+	.main-navigation li:focus > ul.sub-menu {
+		display: flex;
+		background-color: #F2F2F2;
+		flex-flow: column nowrap;
 		position: absolute;
-	}
-	.main-navigation ul ul li {
-		padding-left: 0;
-		position: relative;
+		top: 39px;
+		padding: 0;
 	}
 
-	.main-navigation ul ul li:hover {
-		background-color: #EAE6FF;
+	.main-navigation li:hover > ul.sub-menu a,
+	.main-navigation li:focus > ul.sub-menu a {
+		min-width: 150px;
 	}
 
-	.main-navigation ul ul li a {
-		background: none;
-		text-align: left;
-	}
-
-	.main-navigation ul li a {
-		padding: .4em 1em;
-		font-size: .8em;
+	.menu-toggle {
+		display: none;
 	}
 
 	.super-menu {
@@ -928,24 +877,24 @@ a.donate-link {
 }
 
 @media screen and (min-width: 900px) {
+
 	.main-navigation {
-		-webkit-box-pack: end;
-		-ms-flex-pack: end;
-		justify-content: flex-end;
-		padding-top: 0;
-		margin-top: 0px;
-	  margin-bottom: 0px;
-		max-width: 65%;
+		margin-bottom: 0;
 	}
 
 	.main-navigation ul {
 		justify-content: flex-end;
 	}
-		/* If you want dropdowns to open on hover, uncomment this: */
-	li:hover > ul,
-	li:focus > ul {
-		display: block;
+
+	.main-navigation .menu > li {
+		padding: 1em;
 	}
+
+	.main-navigation li:hover > ul.sub-menu,
+	.main-navigation li:focus > ul.sub-menu {
+		top: 62px;
+	}
+
 
 	a.subscribe-link {
 		padding: .7em .4em;
@@ -1186,7 +1135,7 @@ a.donate-link {
 @media screen and (min-width: 600px) {
     .site-branding {
 			text-align: center;
-			margin: 1em 1em 1em 1em;
+			margin: .5em;
     }
 		.site-title {
 			margin-bottom: 0;
@@ -1196,7 +1145,7 @@ a.donate-link {
 @media screen and (min-width: 900px) {
     .site-header {
         display: flex;
-				flex-flow: row wrap;
+				flex-flow: row nowrap;
         justify-content: space-between;
     }
     .site-branding {
@@ -1683,6 +1632,11 @@ ul.mission li {
 	margin: -3em;
 }
 
+/* GET INVOLVED PAGE */
+.get-involved-form-wrapper {
+	margin: -3em;
+}
+
 /* APPLY PAGE */
 .application-form-wrapper {
 	margin: -3em;
@@ -1790,6 +1744,7 @@ ul.mission li {
 	background-color: #FEFEFE;
 	max-width: 350px;
 	height: 100%;
+	position: relative;
 }
 
 @media screen and (min-width: 700px) {
@@ -1802,6 +1757,7 @@ ul.mission li {
 		max-width: 300px;
 		margin: 0em auto;
 	}
+
 }
 
 /*--------------------------------------------------------------

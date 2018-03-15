@@ -61,15 +61,29 @@
 			return;
 		}
 
+		// Collapse menu when toggled off
+		menuToggle.off( 'click.tonyfoundation', function() {
+			siteNavContain.css( 'width','unset' );
+		});
+
 		// Add an initial value for the attribute.
 		menuToggle.attr( 'aria-expanded', 'false' );
 
 		menuToggle.on( 'click.tonyfoundation', function() {
 			siteNavContain.toggleClass( 'toggled-on' );
+			siteNavContain.css( 'width','100%' );
 
 			$( this ).attr( 'aria-expanded', siteNavContain.hasClass( 'toggled-on' ) );
 		});
+
+		// if ( siteNavContain.toggleClass( 'toggled-on' ))  {
+		// 	menuToggle.on('click.tonyfoundation', function() {
+		// 		siteNavContain.css( 'width','unset' );
+		// 	});
+		// }
 	})();
+
+
 
 	// Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility.
 	(function() {

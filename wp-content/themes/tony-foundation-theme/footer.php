@@ -17,11 +17,11 @@
 		<img class="footer-logo" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/tf-ribbon.png">
 		<button type="button">Join our mailing list</button>
 		<ul class="page-list">
-			<li><a href="#">About</a></li>
-			<li><a href="#">Tony's Story</a></li>
-			<li><a href="#">News</a></li>
+			<li><a href="<?php echo site_url(); ?>/about">About</a></li>
+			<li><a href="<?php echo site_url(); ?>/about#tonys-story">Tony's Story</a></li>
+			<li><a href="<?php echo site_url(); ?>/news">News</a></li>
 			<!-- <li><a href="#">Apply for Support</a></li> -->
-			<li><a href="#">Contact</a></li>
+			<li><a href="<?php echo site_url(); ?>/contact">Contact</a></li>
 		</ul>
 			<div class="social-wrapper">
 				<a href="https://www.facebook.com/tonyfoundation"><svg id="icon-facebook" viewBox="0 0 19 32">
