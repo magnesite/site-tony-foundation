@@ -50,7 +50,7 @@
 					  <path d="M0,55.67,30.67,64.1l13,23.09,12.26-16.3,21.3,6.4L80.13,0ZM69.68,11.52,31.18,60.61l-23-6.33ZM46.36,68l6,1.84L45.86,78.4ZM43,65.12l-.6,12.7L33.94,62.76,67,20.62Zm12.76,2.07h0l-8.48-2.63L76.21,10.9,73.87,72.64Z"/>
 					</g>
 					</svg>
-					<a class="subscribe-link" href="#">Subscribe</a>
+					<a class="subscribe-link" href="<?php echo site_url(); ?>/subscribe">Subscribe</a>
 				</div><!--subscribe-cta-wrapper-->
 
 				<div class="donate-cta-wrapper">
@@ -69,7 +69,7 @@
 					  <path d="M0,55.67,30.67,64.1l13,23.09,12.26-16.3,21.3,6.4L80.13,0ZM69.68,11.52,31.18,60.61l-23-6.33ZM46.36,68l6,1.84L45.86,78.4ZM43,65.12l-.6,12.7L33.94,62.76,67,20.62Zm12.76,2.07h0l-8.48-2.63L76.21,10.9,73.87,72.64Z"/>
 					</g>
 					</svg>
-					<a class="donate-link" href="#">Donate</a>
+					<a class="donate-link" href="<?php echo site_url(); ?>/donate">Donate</a>
 				</div><!--donate-cta-wrapper-->
 
 
