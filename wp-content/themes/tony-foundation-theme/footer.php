@@ -15,7 +15,7 @@
 
 	<footer class="site-footer">
 		<img class="footer-logo" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/tf-ribbon.png">
-		<button type="button">Join our mailing list</button>
+		<a class="join-link" href="<?php echo site_url(); ?>/subscribe">Join our mailing list</a>
 		<ul class="page-list">
 			<li><a href="<?php echo site_url(); ?>/about">About</a></li>
 			<li><a href="<?php echo site_url(); ?>/about#tonys-story">Tony's Story</a></li>

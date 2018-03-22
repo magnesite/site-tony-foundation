@@ -1110,10 +1110,6 @@ a.donate-link {
 		/* margin: 1em 60px 0 1em; */
 }
 
-.custom-logo-text {
-	padding-top: 5px;
-  display: inline-block;
-}
 .custom-logo-link img {
 	max-width: 25px;
 }
@@ -1125,18 +1121,12 @@ a.donate-link {
 }
 
 .site-title {
-    padding: 0 .5em;
-		margin: 0;
-    font-size: 24px;
-		font-size: 1.1em;
-    font-weight: 400;
-		line-height: 1.2em;
+    display: inline-block;
 }
 
-.site-title a {
-    color: #262626;
-    text-decoration: none;
-    vertical-align: top;
+.site-title img {
+    max-width: 250px;
+		margin-left: 10px;
 }
 
 .site-title a:hover {
@@ -1227,6 +1217,7 @@ a.donate-link {
 
 .continue-reading {
 	position: absolute;
+	z-index: 999999;
 }
 
 .continue-reading a {
@@ -1668,7 +1659,7 @@ ul.mission li {
 
 /* APPLY PAGE */
 .application-form-wrapper {
-	margin: -3em;
+	margin: 0 -3em;
 }
 
 /* EXPLORE COLORS PAGE */
@@ -1714,6 +1705,31 @@ ul.mission li {
 	font-size: 0.7em;
 }
 
+
+/* subscribe page */
+
+/* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
+
+label[for*="EMAILTYPE"] {
+	margin-left: 10px;
+}
+
+
+@media screen and (min-width: 600px) {
+	.subscribe-form-wrapper {
+		margin: 0 auto;
+		max-width: 80%;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.subscribe-form-wrapper {
+		margin: 0 auto;
+		max-width: 60%;
+	}
+}
+
+
 /*--------------------------------------------------------------
 ## Front page
 ---------------------------------------------------------------*/
@@ -1757,34 +1773,64 @@ ul.mission li {
 
 /* site feature section */
 
-.site-feature svg {
-	display: block;
-	margin: 20px auto;
-}
 
 .site-features-wrapper {
-	display: block;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
 	width: 100%;
 	margin-bottom: 1em;
 }
 
+.site-feature-link {
+	margin: 1em;
+}
+
 .site-feature {
-	margin: .5em auto;
 	background-color: #FEFEFE;
-	max-width: 350px;
-	height: 100%;
-	position: relative;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 300px;
+	min-height: 250px;
+}
+
+.site-feature.coming-soon{
+	background-image: url('images/coming-soon-ribbon.svg');
+	background-size: cover;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 300px;
+	min-height: 250px;
+}
+
+.site-feature-icon {
+	display: block;
+	max-height: 200px;
+	max-width: 200px;
+	margin: 0 auto;
+}
+
+.site-feature-label {
+	display: inline-block;
+	text-decoration: none;
+	margin: 1em;
 }
 
 @media screen and (min-width: 700px) {
-	.site-features-wrapper {
-		display: flex;
+	 .site-features-wrapper {
 		flex-flow: row nowrap;
 	}
 	.site-feature {
-		min-width: 30%;
-		max-width: 300px;
-		margin: 0em auto;
+	flex: 1 1 auto;
+	max-width: unset;
+	min-height: 230px;
+	min-width: 240px;
+
+	}
+	.site-feature-label {
+		font-size: 20px;
 	}
 
 }
@@ -1809,17 +1855,18 @@ ul.mission li {
 	margin: 2em auto 1em auto;
 }
 
-.site-footer button {
+.site-footer .join-link {
 	border: solid;
-	border-width: 2px;
+	border-width: 1.5px;
 	border-color: #EAE6FF;
 	background: transparent;
 	color: #F2F2F2;
-	font-size: 1em;
+	font-size: 1.2em;
 	line-height: 1;
 	padding: .5em;
 	margin: .5em auto;
 	max-width: 80%;
+	text-decoration: none;
 }
 
 .site-footer button:hover, .site-footer button:focus {

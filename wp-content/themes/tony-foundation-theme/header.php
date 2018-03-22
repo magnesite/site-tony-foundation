@@ -30,14 +30,7 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-                    <h1 class="site-title"><a class="custom-logo-text" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Tony</a><?php the_custom_logo();?><a class="custom-logo-text" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Foundation</a></h1>
-			<?php else : ?>
-				<p class="site-title"><a class="custom-logo-text" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Tony</a><?php the_custom_logo();?><a class="custom-logo-text" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Foundation</a></p>
-			<?php
-			endif; ?>
-
+			<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/tony-foundation-title.png"/></a>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

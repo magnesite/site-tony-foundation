@@ -13,7 +13,7 @@ get_header(); ?>
 				<div class="about-hero-wrapper">
 					<img class="about-hero-sm" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/tony-colors-banner-sm.jpg">
 					<img class="about-hero-lg" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/tony-colors-banner.jpg">
-					<a class="explore-colors">Explore more colors >></a>
+					<a href="<?php echo site_url(); ?>/cancer-colors" class="explore-colors">Explore more colors >></a>
 				</div><!--hero-wrapper-->
 
 
@@ -30,7 +30,7 @@ get_header(); ?>
 
 			<div class="profile-list-wrapper">
 
-					<?php $people_query = new WP_Query( array( 'post_type' => 'tfpeople' ) ); ?>
+					<?php $people_query = new WP_Query( array( 'post_type' => 'tfpeople', 'posts_per_page' => -1 ) ); ?>
 
 					<?php while ( $people_query->have_posts() ) : $people_query->the_post(); ?>
 
