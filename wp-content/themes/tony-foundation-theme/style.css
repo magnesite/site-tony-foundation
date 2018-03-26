@@ -628,7 +628,7 @@ a:hover {
 .menu-toggle {
 	height: 1em;
 	position: absolute;
-	right: 30px;
+	right: 23px;
 	top: 25px;
 	background-color: transparent;
 }
@@ -667,7 +667,7 @@ button.dropdown-toggle:hover {
 	border-width: 1.5px;
 	border-color: #666666;
 	background-color: #D6D6D6;
-	margin: .5em;
+	margin: .3em;
 	max-width: 200px;
 }
 
@@ -695,7 +695,7 @@ button.dropdown-toggle:hover {
 	border-width: 2px;
 	border-color: #B8CF52;
 	background-color: #B8CF52;
-	margin: .5em;
+	margin: .3em;
 	max-width: 200px;
 }
 
@@ -844,8 +844,8 @@ a.donate-link {
     background-position: center;
 		background-size: cover;
     z-index: 9999999;
-    top: -21px;
-    right: 100px;
+    top: -11px;
+    right: 85px;
 	}
 
 	.subscribe-cta-wrapper:hover {
@@ -868,8 +868,8 @@ a.donate-link {
     background-position: center;
 		background-size: cover;
     z-index: 999999;
-    top: -21px;
-    right: 10px;
+    top: -11px;
+    right: 0px;
 	}
 
 	.donate-cta-wrapper:hover {
@@ -883,12 +883,12 @@ a.donate-link {
 
 	a.subscribe-link {
 		padding: .8em .4em;
-    font-size: .7em;
+    font-size: .9em;
 	}
 
 	a.donate-link {
     padding: .8em;
-    font-size: .7em;
+    font-size: .9em;
 	}
 
 
@@ -900,6 +900,7 @@ a.donate-link {
 		margin-bottom: 0;
 		justify-content: flex-end;
 		z-index: 99999;
+		height: 100px;
 	}
 
 	.main-navigation ul {
@@ -922,12 +923,12 @@ a.donate-link {
 
 	a.subscribe-link {
 		padding: .7em .4em;
-    font-size: .6em;
+    font-size: .9em;
 	}
 
 	a.donate-link {
     padding: .7em;
-    font-size: .6em;
+    font-size: .9em;
 	}
 
 }
@@ -1375,11 +1376,14 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 
 	.post-loop-wrapper {
 		flex-flow: column nowrap;
+		margin-left: -1em;
+		margin-right: -1em;
 	}
 
 	.home-page .type-post {
 		flex-flow: row nowrap;
 		max-width: unset;
+		width: 800px;
 	}
 
 	.preview-text-wrapper .entry-content {
@@ -1754,6 +1758,11 @@ ul.mission li {
 	margin: -3em;
 }
 
+/* CONTACT PAGE */
+.contact-form-wrapper {
+	margin: -3em;
+}
+
 /* GET INVOLVED PAGE */
 .get-involved-form-wrapper {
 	margin: -3em;
@@ -1950,7 +1959,13 @@ label[for*="EMAILTYPE"] {
 --------------------------------------------------------------*/
 .site-footer {
 	background-color: #666666;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
+	-webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
 	flex-flow: column nowrap;
 	justify-content: center;
 	font-size: 1em;
@@ -1961,7 +1976,7 @@ label[for*="EMAILTYPE"] {
 
 
 .footer-logo {
-	max-width: 80px;
+	width: 80px;
 	display: inline-block;
 	margin: 2em auto 1em auto;
 }
@@ -1976,7 +1991,7 @@ label[for*="EMAILTYPE"] {
 	line-height: 1;
 	padding: .5em;
 	margin: .5em auto;
-	max-width: 80%;
+	width: 210px;
 	text-decoration: none;
 }
 
