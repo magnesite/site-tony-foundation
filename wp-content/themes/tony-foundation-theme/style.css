@@ -1337,8 +1337,9 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 
 .preview-text-wrapper {
  flex-flow: column nowrap;
- flex: 1 0 auto;
+ flex: 1 1 auto;
  text-align: center;
+ display: flex;
 }
 
 .preview-text-wrapper p {
@@ -1347,8 +1348,8 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 
 .thumbnail-continue-reading {
 	font-style: italic;
-  text-align: right;
-  display: inherit;
+	text-align: right;
+	display: inline;
 }
 
 .preview-text-wrapper .posted-on {
@@ -1378,6 +1379,44 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 
 	.home-page .type-post {
 		flex-flow: row nowrap;
+		max-width: unset;
+	}
+
+	.preview-text-wrapper .entry-content {
+		font-size: 18px;
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 0 1em 1em 1em;
+	}
+
+	.preview-text-wrapper .entry-meta  {
+		text-align: left;
+	}
+
+	.preview-text-wrapper .entry-meta .entry-title {
+		background-color: transparent;
+	}
+
+	.preview-text-wrapper .entry-meta .entry-title h2 {
+		color: #262626;
+		font-size: 1.3em;
+	}
+
+	.preview-text-wrapper .entry-meta span {
+		margin-left: 21px;
+		margin-top: 0px;
+	}
+
+	.preview-text-wrapper p {
+		text-align: left;
+		margin-bottom: 0;
+	}
+
+	.thumbnail-continue-reading {
+		font-style: italic;
+		text-align: right;
+		display: inline-block;
+		margin-top: 15px;
 	}
 
 }
