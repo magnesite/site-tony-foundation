@@ -30,7 +30,7 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/tony-foundation-title.png"/></a>
+		<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/tony-foundation-title.png"/></a>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

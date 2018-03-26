@@ -14,11 +14,7 @@
 	<div class="preview-text-wrapper">
 		<div class="entry-meta preview">
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+			the_title( '<a class="entry-title" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' .'<h2>', '</h2></a>' );
 
 		if ( 'post' === get_post_type() ) : ?>
 
@@ -46,12 +42,14 @@
 				get_the_title()
 			) );
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'tonyfoundation' ),
-				'after'  => '</div>',
-			) );
-		?>
+			// wp_link_pages( array(
+			// 	'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'tonyfoundation' ),
+			// 	'after'  => '</div>',
+			// ) );
+		echo '<a class="thumbnail-continue-reading" href="' . esc_url( get_permalink() ) . '">Continue reading...</a>'?>
+
 	</div><!-- .entry-content -->
+
 
 	</div><!--preview-text-wrapper-->
 

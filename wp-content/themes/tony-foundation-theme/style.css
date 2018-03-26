@@ -629,7 +629,7 @@ a:hover {
 	height: 1em;
 	position: absolute;
 	right: 30px;
-	top: 10px;
+	top: 25px;
 	background-color: transparent;
 }
 
@@ -1100,8 +1100,10 @@ a.donate-link {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
-		margin-top: 10px;
+		padding-top: 10px;
 		padding: 0;
+    background-color: #FEFEFE;
+		min-height: 80px;
 }
 
 .site-branding {
@@ -1122,11 +1124,13 @@ a.donate-link {
 
 .site-title {
     display: inline-block;
+		padding: 10px;
+
 }
 
 .site-title img {
     max-width: 250px;
-		margin-left: 10px;
+		margin: auto;
 }
 
 .site-title a:hover {
@@ -1152,7 +1156,7 @@ a.donate-link {
 			margin: .5em;
     }
 		.site-title {
-			padding: 0;
+			padding: 5px;
 			margin: 0;
 		}
 }
@@ -1177,6 +1181,11 @@ a.donate-link {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.post-loop-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+}
+
 .type-post {
 	background-color: #FFFFFF;
 }
@@ -1193,7 +1202,6 @@ a.donate-link {
     font-size: .8em;
 		padding: 1em;
 }
-
 
 .updated:not(.published) {
 	display: none;
@@ -1288,43 +1296,80 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 	box-shadow: none;
 }
 
-div.type-post {
-	display: flex;
-	max-height: 300px;
-	margin: 2em 0;
-}
-
 .post img.size-tonyfoundation-preview {
+	width: auto;
+	height: auto;
 	border: none;
 	box-shadow: none;
 }
 
 @media screen and (max-width: 749px) {
 	.post img.size-tonyfoundation-preview {
-		width: 80%;
-		height: 80%;
+
  }
 }
 
+/* home page loop post thumbnails */
+
 .entry-meta.preview {
-	margin-left: 1.5em;
+}
+
+.entry-meta.preview .entry-title {
+	text-decoration: none;
+	display: inline-block;
+	color: #FEFEFE;
+	margin: 0;
+	padding: 1em;
+	background-color: rgba(102,102,102,0.7);
+	width: 100%;
 }
 
 .entry-meta.preview h2 {
-	font-size: 1.6em;
-	text-decoration: none;
-}
-
-.entry-meta.preview h2 a {
-	text-decoration: none;
+	font-size: 1.1em;
+	color: #FEFEFE;
+	font-weight: 400;
+	margin: 0;
 }
 
 .entry-content.preview {
-	margin: 0;
-	padding-left: 1.5em;
+ margin-top: 0;
 }
+
 .preview-text-wrapper {
- font-size: .8em;
+ flex-flow: column nowrap;
+ flex: 1 0 auto;
+ text-align: center;
+}
+
+.preview-text-wrapper p {
+	text-align: left;
+}
+
+.thumbnail-continue-reading {
+	font-style: italic;
+  text-align: right;
+  display: inherit;
+}
+
+.preview-text-wrapper .posted-on {
+	display: inline-block;
+  margin-top: 25px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.home-page .type-post {
+	display: flex;
+	flex-flow: column nowrap;
+	max-width: 300px;
+	margin: 40px auto;
+}
+
+@media screen and (min-width: 600px) {
+	.home-page .type-post {
+		
+	}
+
 }
 
 /* post navigation */
@@ -1507,7 +1552,7 @@ div.type-post {
 	position: relative;
   bottom: 3em;
   color: #F2F2F2;
-  background-color: #666666c4;
+  background-color: rgba(102,102,102,0.7);
   padding: 1em;
   height: 3em;
 	font-family: 'Roboto Slab', serif;
@@ -1526,6 +1571,12 @@ div.type-post {
  font-size: .8em;
 }
 
+/* main blog index page (home.php) */
+
+.home-page-title h1 {
+	text-align: center;
+	margin-bottom: 1.5em;
+}
 
 /* About page */
 
@@ -1634,9 +1685,11 @@ ul.mission li {
 }
 
 .profile-wrapper {
-	flex-basis: wrap;
 	justify-content: space-evenly;
 	margin: 1em;
+	display: flex;
+	flex-flow: column nowrap;
+	text-align: center;
 }
 
 .profile-wrapper h2, .profile-wrapper h3 {
