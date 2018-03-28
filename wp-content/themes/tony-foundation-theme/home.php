@@ -11,12 +11,12 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main home-page">
+		<main id="main" class="site-main blog-index">
 
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header home-page-title">
+			<header class="page-header blog-index-title">
 				<h1>News and Posts</h1>
 			</header><!-- .page-header -->
 

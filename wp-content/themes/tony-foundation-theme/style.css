@@ -577,8 +577,14 @@ a:hover {
 --------------------------------------------------------------*/
 .main-navigation {
 	width: 100%;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
-	flex-flow: column nowrap;
+	-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 	font-family: 'Roboto Condensed', sans-serif;
 	margin-bottom: 1em;
 	background-color: rgba(217,217,217,0.95);
@@ -594,15 +600,27 @@ a:hover {
 }
 
 .main-navigation li {
-	display: flex;
-	flex-flow: column nowrap;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
+	-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 	flex: 0 1 auto;
 }
 
 .main-navigation ul {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
 	list-style: none;
-	flex-flow: column nowrap;
+	-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 	flex: 1 1 auto;
 	padding: 0 1em;
 	margin: 0;
@@ -660,7 +678,11 @@ button.dropdown-toggle:hover {
 }
 
 .subscribe-cta-wrapper {
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 	flex: 1 1 auto;
 	justify-content: center;
 	border-style: solid;
@@ -688,7 +710,11 @@ button.dropdown-toggle:hover {
 }
 
 .donate-cta-wrapper {
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 	flex: 1 1 auto;
 	justify-content: center;
 	border-style: solid;
@@ -738,11 +764,19 @@ a.donate-link {
 /* Toggle small menu and children on */
 .toggled-on ul,
 .sub-menu.toggled-on {
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 }
 
 .toggled-on .super-menu {
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
   justify-content: space-around;
 	margin: 1em 0 2em 0;
 	width: 100%;
@@ -762,8 +796,14 @@ a.donate-link {
 	.main-navigation {
 		max-width: 100%;
 		font-size: 0.8em;
-		display: flex;
-		flex-flow: column nowrap;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
+		-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 		font-family: 'Roboto Condensed', sans-serif;
 		margin-bottom: 0;
 		background-color: transparent;
@@ -780,8 +820,14 @@ a.donate-link {
 	}
 
 	.main-navigation li {
-		display: flex;
-		flex-flow: column nowrap;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
+		-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 		flex: 0 1 auto;
 		position: relative;
 		margin: 0;
@@ -789,7 +835,11 @@ a.donate-link {
 	}
 
 	.main-navigation ul {
-		display: flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 		list-style: none;
 		flex-flow: row nowrap;
 		flex: 1 1 auto;
@@ -807,9 +857,15 @@ a.donate-link {
 
 	.main-navigation li:hover > ul.sub-menu,
 	.main-navigation li:focus > ul.sub-menu {
-		display: flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 		background-color: #F2F2F2;
-		flex-flow: column nowrap;
+		-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 		position: absolute;
 		top: 39px;
 		padding: 0;
@@ -830,7 +886,11 @@ a.donate-link {
 	}
 
 	.super-menu {
-		display: flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 	}
 
 	.subscribe-cta-wrapper {
@@ -1098,8 +1158,14 @@ a.donate-link {
 .site-header {
     font-family: "Roboto Slab", serif;
 		position: relative;
-		display: flex;
-		flex-flow: row wrap;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
+		-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: row wrap;
 		justify-content: space-between;
 		padding-top: 10px;
 		padding: 0;
@@ -1164,7 +1230,11 @@ a.donate-link {
 
 @media screen and (min-width: 900px) {
     .site-header {
-        display: flex;
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 				flex-flow: row nowrap;
         justify-content: space-between;
     }
@@ -1183,8 +1253,14 @@ a.donate-link {
 ## Posts and pages
 --------------------------------------------------------------*/
 .post-loop-wrapper {
-	display: flex;
-	flex-flow: row wrap;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
+	-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 }
 
 .type-post {
@@ -1211,7 +1287,7 @@ a.donate-link {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0;
 	padding: 1em;
 }
 
@@ -1274,7 +1350,11 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 
 @media screen and (min-width: 600px) {
 	article.tfpeople {
-		display: flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 	}
 
 	article.tfpeople header h1, article.tfpeople header h2 {
@@ -1310,7 +1390,7 @@ article.tfpeople header h1, article.tfpeople .entry-content {
  }
 }
 
-/* home page loop post thumbnails */
+/* blog index post loop thumbnails */
 
 .entry-meta.preview {
 }
@@ -1337,10 +1417,16 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 }
 
 .preview-text-wrapper {
- flex-flow: column nowrap;
- flex: 1 1 auto;
- text-align: center;
- display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+ 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+ 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+ 	display: -webkit-flex;     /* NEW - Chrome */
+ 	display: flex;
+ 	-webkit-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+ 	flex: 1 1 auto;
+ 	text-align: center;
 }
 
 .preview-text-wrapper p {
@@ -1360,14 +1446,20 @@ article.tfpeople header h1, article.tfpeople .entry-content {
   font-style: italic;
 }
 
-.home-page .type-post {
+.blog-index .type-post {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
+	-webkit-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
 	flex-flow: column nowrap;
 	max-width: 300px;
 	margin: 40px auto;
 }
 
-.home-page .type-post img {
+.blog-index .type-post img {
 	width: max-content;
 	height: max-content;
 }
@@ -1375,12 +1467,16 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 @media screen and (min-width: 900px) {
 
 	.post-loop-wrapper {
+		-webkit-flex-flow: column nowrap;
+		-ms-flex-flow: column nowrap;
 		flex-flow: column nowrap;
 		margin-left: -1em;
 		margin-right: -1em;
 	}
 
-	.home-page .type-post {
+	.blog-index .type-post {
+		-webkit-flex-flow: row nowrap;
+		-ms-flex-flow: row nowrap;
 		flex-flow: row nowrap;
 		max-width: unset;
 		width: 800px;
@@ -1388,8 +1484,14 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 
 	.preview-text-wrapper .entry-content {
 		font-size: 18px;
-		display: flex;
-		flex-flow: column nowrap;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
+		-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 		padding: 0 1em 1em 1em;
 	}
 
@@ -1576,7 +1678,13 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 /* sticky post thumbnails */
 
 .sticky-posts-wrapper {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
+	-webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
 
@@ -1584,14 +1692,26 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 	background-color: #D9D9D9;
 	max-width: 350px;
   margin: 1em auto;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
-	flex-flow: column nowrap;
+	-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 	max-height: none;
 }
 
 .post-thumbnail-wrapper.sticky .post-thumbnail-link {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
-  flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
   justify-content: flex-end;
 }
 
@@ -1626,7 +1746,7 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 
 /* main blog index page (home.php) */
 
-.home-page-title h1 {
+.blog-index-title h1 {
 	text-align: center;
 	margin-bottom: 1.5em;
 }
@@ -1731,8 +1851,14 @@ ul.mission li {
 }
 
 .profile-list-wrapper {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
-	flex-flow: row wrap;
+	-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: row wrap;
 	justify-content: space-evenly;
 	/* flex-direction: initial; */
 }
@@ -1740,8 +1866,14 @@ ul.mission li {
 .profile-wrapper {
 	justify-content: space-evenly;
 	margin: 1em;
-	display: flex;
-	flex-flow: column nowrap;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
+	-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 	text-align: center;
 }
 
@@ -1886,7 +2018,11 @@ label[for*="EMAILTYPE"] {
 
 
 .site-features-wrapper {
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 	flex-flow: column wrap;
 	justify-content: space-around;
 	width: 100%;
@@ -1906,14 +2042,20 @@ label[for*="EMAILTYPE"] {
 	min-height: 250px;
 }
 
-.site-feature.coming-soon{
-	background-image: url('images/coming-soon-ribbon-sm.svg');
+.site-feature.coming-soon {
+	background-image: url('images/coming-soon-ribbon-xsm.svg');
 	background-size: cover;
 	display: block;
 	margin: 0 auto;
 	text-align: center;
 	max-width: 300px;
 	min-height: 250px;
+}
+
+@media screen and (min-width: 450px) {
+	.site-feature.coming-soon {
+		background-image: url('images/coming-soon-ribbon-sm.svg');
+	}
 }
 
 .site-feature-icon {
@@ -1939,20 +2081,18 @@ label[for*="EMAILTYPE"] {
 	}
 
 	.site-feature, .site-feature.coming-soon {
-	flex: 1 1 auto;
-	max-width: unset;
-	min-height: 230px;
-	min-width: 240px;
-
-
+		flex: 1 1 auto;
+		max-width: unset;
+		min-height: 230px;
+		min-width: 240px;
 	}
-
 
 	.site-feature-label {
 		font-size: 20px;
 	}
 
 }
+
 
 /*--------------------------------------------------------------
 ## Site Footer
@@ -1995,7 +2135,7 @@ label[for*="EMAILTYPE"] {
 	text-decoration: none;
 }
 
-.site-footer button:hover, .site-footer button:focus {
+.site-footer a:hover, .site-footer a:focus {
 	color: #262626;
 	background-color: #F2F2F2;
 }
@@ -2079,7 +2219,11 @@ footer .social-wrapper svg:hover, footer .social-wrapper svg:focus {
 
 @media screen and (min-width: 500px) {
 	.site-footer {
-		display: flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 		font-size: .7em;
 		color: #F2F2F2;
 		padding: 1em 2em 0 2em;
