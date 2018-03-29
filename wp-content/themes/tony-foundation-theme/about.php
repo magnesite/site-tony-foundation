@@ -34,17 +34,19 @@ get_header(); ?>
 
 					<?php while ( $people_query->have_posts() ) : $people_query->the_post(); ?>
 
-					<div class="profile-wrapper">
-						<a href="<?php the_permalink($post->ID) ?>" class="post-thumbnail-link">
-								<?php the_post_thumbnail('tonyfoundation-person', array('class' => 'circle-image')); ?>
-						</a><!--post-thumbnail-link-->
-								<?php
-									the_title( '<h2 class="person-name"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>');
-									echo '<h3 class="person-title">';
-									echo get_post_meta($post->ID, 'person-title', true);
-									echo '</h3>';?>
+					<a href="<?php the_permalink($post->ID) ?>" class="person-thumbnail-link">
+						<div class="profile-wrapper">
 
-					</div><!--profile-wrapper-->
+							<?php the_post_thumbnail('tonyfoundation-person', array('class' => 'circle-image')); ?>
+
+							<?php
+								the_title( '<h2 class="person-name">', '</h2>');
+								echo '<h3 class="person-title">';
+								echo get_post_meta($post->ID, 'person-title', true);
+								echo '</h3>';?>
+
+						</div><!--profile-wrapper-->
+					</a><!--person-thumbnail-link-->
 
 					<?php endwhile;?>
 

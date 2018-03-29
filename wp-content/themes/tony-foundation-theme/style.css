@@ -1892,32 +1892,39 @@ ul.mission li {
 	display: -ms-flexbox;      /* TWEENER - IE 10 */
 	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
-	-webkit-flex-flow: column nowrap;
--ms-flex-flow: column nowrap;
-flex-flow: row wrap;
-	justify-content: space-evenly;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	justify-content: center;
 	/* flex-direction: initial; */
 }
 
+.profile-list-wrapper .person-thumbnail-link {
+	text-decoration: unset;
+}
+
 .profile-wrapper {
-	justify-content: space-evenly;
-	margin: .5em;
-	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-	display: -ms-flexbox;      /* TWEENER - IE 10 */
-	display: -webkit-flex;     /* NEW - Chrome */
+	margin: 1em auto;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-flow: column nowrap;
 	-ms-flex-flow: column nowrap;
 	flex-flow: column nowrap;
+	align-items: center;
 	text-align: center;
-  width: 200px;
+	width: 250px;
 }
+
+.profile-wrapper img {
+	width: 150px;
 }
 
 .profile-wrapper .person-name {
-	font-size: .8em;
 	text-align: center;
+	font-size: .8em;
 }
 
 .profile-wrapper .person-title {
@@ -1926,7 +1933,7 @@ flex-flow: row wrap;
 	margin: 0;
 }
 
-.profile-wrapper .person-name a {
+.profile-wrapper .person-name {
 	text-decoration: none;
 }
 
