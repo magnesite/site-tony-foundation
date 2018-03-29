@@ -21,28 +21,27 @@ get_header(); ?>
 			</div><!--hero-wrapper-->
 
 			<div class="site-features-wrapper">
-				<a class="site-feature-link" href="<?php echo site_url(); ?>/about#tonys-story">
+				<a class="site-feature-wrapper-with-link" href="<?php echo site_url(); ?>/about#tonys-story">
 					<div class="site-feature">
-					<img id="icon-family" class="site-feature-icon" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/icon-family.png"/>
-					<h2 class="site-feature-label">Tony's Story</h2>
-				</div>
-			</a><!--site-feature-->
-			<a class="site-feature-link" href="<?php echo site_url(); ?>#">
-				<div class="site-feature coming-soon">
-				<img id="icon-apply" class="site-feature-icon" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/icon-apply.png"/>
-				<h2 class="site-feature-label">Apply for Assistance</h2>
-				</div><!--site-feature-->
-			</a>
-			<a class="site-feature-link" href="<?php echo site_url(); ?>/tfcustompage/get-involved">
-				<div class="site-feature">
-				<img id="icon-get-involved" class="site-feature-icon" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/icon-get-involved.png"/>
-				<h2 class="site-feature-label">Get Involved</h2>
-
-			</div><!--site-feature-->
+						<img id="icon-family" class="site-feature-icon" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/icon-family.png"/>
+						<h2 class="site-feature-label">Tony's Story</h2>
+					</div><!--site-feature-->
 				</a>
+				<a class="site-feature-wrapper-with-link" href="<?php echo site_url(); ?>#">
+					<div class="site-feature coming-soon">
+						<img id="icon-apply" class="site-feature-icon" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/icon-apply.png"/>
+						<h2 class="site-feature-label">Apply for Assistance</h2>
+					</div><!--site-feature-->
+			</a><!--site-feature-wrapper-with-link-->
+			<a class="site-feature-wrapper-with-link" href="<?php echo site_url(); ?>/tfcustompage/get-involved">
+				<div class="site-feature">
+					<img id="icon-get-involved" class="site-feature-icon" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/icon-get-involved.png"/>
+					<h2 class="site-feature-label">Get Involved</h2>
+				</div><!--site-feature-->
+			</a><!--site-feature-wrapper-with-link-->
 			</div><!--site-features-wrapper-->
 
-			<section class="sticky-posts-wrapper">
+			<section class="sticky-section-wrapper">
 
 				<?php $sticky_posts = get_option( 'sticky_posts' );
 					$args = array(
@@ -55,17 +54,19 @@ get_header(); ?>
 
 				<?php while ( $sticky_query->have_posts() ) : $sticky_query->the_post(); ?>
 
-
-					<div <?php post_class(array('post-thumbnail-wrapper', 'sticky')); ?> >
-						<a href="<?php the_permalink($post->ID) ?>" class="post-thumbnail-link">
+					<a href="<?php the_permalink($post->ID) ?>" class="sticky-thumbnail-link">
+						<div <?php post_class(array('sticky-thumbnail-wrapper')); ?> >
 							<?php the_post_thumbnail('tonyfoundation-sticky'); ?>
-						</a><!--post-thumbnail-link-->
-						<div class="title-wrapper">
-							<?php the_title( '<h2></h2>' ); ?>
-						</div><!--title-wrapper-->
-						<?php
-							the_excerpt('<p class="excerpt-text"></p>' );?>
-					</div><!--all-the-post-classes post-thumbnail-wrapper-->
+							<div class="sticky-title-wrapper"><!--wrapper helps override anchor styles-->
+								<?php the_title( '<h2 class="sticky-title"></h2>' ); ?>
+							</div><!--sticky-title-wrapper-->
+							<div class="sticky-excerpt-wrapper"><!--wrapper helps override anchor styles-->
+								<?php the_excerpt();?><span class="sticky-continue-reading">...continue reading</span>
+							</div><!--sticky-excerpt-wrapper-->
+						</div><!--all-the-post-classes+sticky-thumbnail-wrapper-->
+					</a><!--sticky-thumbnail-link-->
+
+
 
 
 				<?php endwhile;?>

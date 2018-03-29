@@ -37,8 +37,8 @@
 				</a>
 			</div><!--social-wrapper-->
 			<div class="legal-wrapper">
-				<p class="copyright-notice">copyright statement goes here</p>
-				<p><a href="#">Site Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+				<p class="copyright-notice">Copyright 2018 Tony Foundation</p>
+				<!-- <p><a href="#">Site Terms of Use</a> | <a href="#">Privacy Policy</a></p> -->
 			</div><!--legal-wrapper-->
 
 

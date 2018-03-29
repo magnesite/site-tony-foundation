@@ -9,25 +9,24 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class(array('post-thumbnail-wrapper')); ?>>
 	<?php the_post_thumbnail('tonyfoundation-preview'); ?>
-	<div class="preview-text-wrapper">
-		<div class="entry-meta preview">
-		<?php
-			the_title( '<a class="entry-title" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' .'<h2>', '</h2></a>' );
+	<div class="thumbnail-text-wrapper">
+		<div class="post-meta-wrapper">
+			<?php
+				the_title( '<a class="entry-title" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' .'<h2>', '</h2></a>' );
+				if ( 'post' === get_post_type() ) :
+			?>
 
-		if ( 'post' === get_post_type() ) : ?>
-
-		<?php
-			tonyfoundation_posted_on();
-			// tonyfoundation_posted_by();
-		?>
+			<?php
+				tonyfoundation_posted_on();
+				// tonyfoundation_posted_by();
+			?>
 
 		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
+		<?php endif; ?>
 
-	<div class="entry-content preview">
+	<div class="post-content-wrapper">
 		<?php
 			the_excerpt( sprintf(
 				wp_kses(
@@ -50,7 +49,6 @@
 
 	</div><!-- .entry-content -->
 
-
 	</div><!--preview-text-wrapper-->
 
-</div><!-- #post-<?php the_ID(); ?> -->
+</div><!--post-thumbnail-wrapper-->
