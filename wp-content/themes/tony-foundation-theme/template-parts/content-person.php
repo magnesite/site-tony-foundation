@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(array('people-post-wrapper')); ?>>
 
 	<header class="entry-header">
 		<?php the_post_thumbnail('tonyfoundation-person', array('class' => 'circle-image')); ?>
