@@ -561,7 +561,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	background-color: #EAE6FF;
+	background-color: #CAC5C5;
 }
 
 a:focus {
@@ -569,7 +569,7 @@ a:focus {
 }
 
 a:hover {
-	background-color: #EAE6FF;
+	background-color: #CAC5C5;
 }
 
 /*--------------------------------------------------------------
@@ -694,7 +694,7 @@ display: flex;
 }
 
 .subscribe-cta-wrapper:hover {
-	background-color: #EAE6FF;
+	background-color: #CAC5C5;
 	border-color: #D6D6D6;
 }
 
@@ -726,7 +726,7 @@ display: flex;
 }
 
 .donate-cta-wrapper:hover {
-	background-color: #EAE6FF;
+	background-color: #CAC5C5;
 	border-color: #D6D6D6;
 }
 
@@ -909,7 +909,7 @@ display: flex;
 	}
 
 	.subscribe-cta-wrapper:hover {
-		background-color: #EAE6FF;
+		background-color: #CAC5C5;
 		border-color: #D6D6D6;
 	}
 
@@ -933,7 +933,7 @@ display: flex;
 	}
 
 	.donate-cta-wrapper:hover {
-		background-color: #EAE6FF;
+		background-color: #CAC5C5;
 		border-color: #D6D6D6;
 	}
 
@@ -1196,8 +1196,9 @@ flex-flow: row wrap;
 }
 
 .site-title img {
-    max-width: 250px;
+    width: 250px;
 		margin: auto;
+		vertical-align: middle;
 }
 
 .site-title a:hover {
@@ -1759,7 +1760,7 @@ flex-flow: row wrap;
 }
 
 .sticky-continue-reading:hover {
-	background-color: #EAE6FF;
+	background-color: #CAC5C5;
 }
 
 @media screen and (min-width: 401px) {
