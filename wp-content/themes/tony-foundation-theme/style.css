@@ -1924,6 +1924,14 @@ ul.mission li {
 
 #leadership h1 {
 	text-align: center;
+	margin-bottom: 50px;
+}
+
+.leadership-section {
+	text-align: center;
+	font-weight: 400;
+	font-size: 1em;
+	margin: 50px 0;
 }
 
 .profile-list-wrapper {
