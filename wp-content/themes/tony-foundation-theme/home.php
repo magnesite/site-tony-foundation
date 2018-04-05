@@ -11,14 +11,16 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main blog-index">
 
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header blog-index-title">
 				<h1>News and Posts</h1>
 			</header><!-- .page-header -->
+
+			<section class="post-loop-wrapper">
 
 			<?php
 			/* Start the Loop */
@@ -29,7 +31,7 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content-preview', get_post_format() );
+				get_template_part( 'template-parts/content-thumbnail', get_post_format() );
 
 			endwhile;
 
@@ -37,9 +39,11 @@ get_header(); ?>
 
 		else :
 
-			get_template_part( 'template-parts/content-preview', 'none' );
+			get_template_part( 'template-parts/content-thumbnail', 'none' );
 
 		endif; ?>
+
+		</section><!--post-loop-wrapper-->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

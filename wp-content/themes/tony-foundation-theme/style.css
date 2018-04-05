@@ -561,7 +561,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	background-color: #EAE6FF;
+	background-color: #CAC5C5;
 }
 
 a:focus {
@@ -569,7 +569,7 @@ a:focus {
 }
 
 a:hover {
-	background-color: #EAE6FF;
+	background-color: #CAC5C5;
 }
 
 /*--------------------------------------------------------------
@@ -577,8 +577,14 @@ a:hover {
 --------------------------------------------------------------*/
 .main-navigation {
 	width: 100%;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
-	flex-flow: column nowrap;
+	-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 	font-family: 'Roboto Condensed', sans-serif;
 	margin-bottom: 1em;
 	background-color: rgba(217,217,217,0.95);
@@ -594,15 +600,27 @@ a:hover {
 }
 
 .main-navigation li {
-	display: flex;
-	flex-flow: column nowrap;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
+	-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 	flex: 0 1 auto;
 }
 
 .main-navigation ul {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
 	list-style: none;
-	flex-flow: column nowrap;
+	-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 	flex: 1 1 auto;
 	padding: 0 1em;
 	margin: 0;
@@ -628,8 +646,8 @@ a:hover {
 .menu-toggle {
 	height: 1em;
 	position: absolute;
-	right: 30px;
-	top: 10px;
+	right: 23px;
+	top: 25px;
 	background-color: transparent;
 }
 
@@ -660,19 +678,23 @@ button.dropdown-toggle:hover {
 }
 
 .subscribe-cta-wrapper {
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 	flex: 1 1 auto;
 	justify-content: center;
 	border-style: solid;
 	border-width: 1.5px;
 	border-color: #666666;
 	background-color: #D6D6D6;
-	margin: .5em;
+	margin: .3em;
 	max-width: 200px;
 }
 
 .subscribe-cta-wrapper:hover {
-	background-color: #EAE6FF;
+	background-color: #CAC5C5;
 	border-color: #D6D6D6;
 }
 
@@ -688,19 +710,23 @@ button.dropdown-toggle:hover {
 }
 
 .donate-cta-wrapper {
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 	flex: 1 1 auto;
 	justify-content: center;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #B8CF52;
 	background-color: #B8CF52;
-	margin: .5em;
+	margin: .3em;
 	max-width: 200px;
 }
 
 .donate-cta-wrapper:hover {
-	background-color: #EAE6FF;
+	background-color: #CAC5C5;
 	border-color: #D6D6D6;
 }
 
@@ -738,11 +764,19 @@ a.donate-link {
 /* Toggle small menu and children on */
 .toggled-on ul,
 .sub-menu.toggled-on {
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 }
 
 .toggled-on .super-menu {
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
   justify-content: space-around;
 	margin: 1em 0 2em 0;
 	width: 100%;
@@ -762,8 +796,14 @@ a.donate-link {
 	.main-navigation {
 		max-width: 100%;
 		font-size: 0.8em;
-		display: flex;
-		flex-flow: column nowrap;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
+		-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 		font-family: 'Roboto Condensed', sans-serif;
 		margin-bottom: 0;
 		background-color: transparent;
@@ -780,8 +820,14 @@ a.donate-link {
 	}
 
 	.main-navigation li {
-		display: flex;
-		flex-flow: column nowrap;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
+		-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 		flex: 0 1 auto;
 		position: relative;
 		margin: 0;
@@ -789,7 +835,11 @@ a.donate-link {
 	}
 
 	.main-navigation ul {
-		display: flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 		list-style: none;
 		flex-flow: row nowrap;
 		flex: 1 1 auto;
@@ -807,9 +857,15 @@ a.donate-link {
 
 	.main-navigation li:hover > ul.sub-menu,
 	.main-navigation li:focus > ul.sub-menu {
-		display: flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 		background-color: #F2F2F2;
-		flex-flow: column nowrap;
+		-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: column nowrap;
 		position: absolute;
 		top: 39px;
 		padding: 0;
@@ -830,7 +886,11 @@ a.donate-link {
 	}
 
 	.super-menu {
-		display: flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 	}
 
 	.subscribe-cta-wrapper {
@@ -844,12 +904,12 @@ a.donate-link {
     background-position: center;
 		background-size: cover;
     z-index: 9999999;
-    top: -21px;
-    right: 100px;
+    top: -11px;
+    right: 85px;
 	}
 
 	.subscribe-cta-wrapper:hover {
-		background-color: #EAE6FF;
+		background-color: #CAC5C5;
 		border-color: #D6D6D6;
 	}
 
@@ -868,12 +928,12 @@ a.donate-link {
     background-position: center;
 		background-size: cover;
     z-index: 999999;
-    top: -21px;
-    right: 10px;
+    top: -11px;
+    right: 0px;
 	}
 
 	.donate-cta-wrapper:hover {
-		background-color: #EAE6FF;
+		background-color: #CAC5C5;
 		border-color: #D6D6D6;
 	}
 
@@ -883,12 +943,12 @@ a.donate-link {
 
 	a.subscribe-link {
 		padding: .8em .4em;
-    font-size: .7em;
+    font-size: .9em;
 	}
 
 	a.donate-link {
     padding: .8em;
-    font-size: .7em;
+    font-size: .9em;
 	}
 
 
@@ -900,6 +960,7 @@ a.donate-link {
 		margin-bottom: 0;
 		justify-content: flex-end;
 		z-index: 99999;
+		height: 100px;
 	}
 
 	.main-navigation ul {
@@ -922,12 +983,12 @@ a.donate-link {
 
 	a.subscribe-link {
 		padding: .7em .4em;
-    font-size: .6em;
+    font-size: .9em;
 	}
 
 	a.donate-link {
     padding: .7em;
-    font-size: .6em;
+    font-size: .9em;
 	}
 
 }
@@ -1097,11 +1158,19 @@ a.donate-link {
 .site-header {
     font-family: "Roboto Slab", serif;
 		position: relative;
-		display: flex;
-		flex-flow: row wrap;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
+		-webkit-flex-flow: column nowrap;
+-ms-flex-flow: column nowrap;
+flex-flow: row wrap;
 		justify-content: space-between;
-		margin-top: 10px;
+		padding-top: 10px;
 		padding: 0;
+    background-color: #FEFEFE;
+		min-height: 80px;
 }
 
 .site-branding {
@@ -1122,11 +1191,14 @@ a.donate-link {
 
 .site-title {
     display: inline-block;
+		padding: 10px;
+
 }
 
 .site-title img {
-    max-width: 250px;
-		margin-left: 10px;
+    width: 250px;
+		margin: auto;
+		vertical-align: middle;
 }
 
 .site-title a:hover {
@@ -1152,16 +1224,20 @@ a.donate-link {
 			margin: .5em;
     }
 		.site-title {
-			padding: 0;
+			padding: 5px;
 			margin: 0;
 		}
 }
 
 @media screen and (min-width: 900px) {
     .site-header {
-        display: flex;
-				flex-flow: row nowrap;
-        justify-content: space-between;
+      display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+			display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+			display: -ms-flexbox;      /* TWEENER - IE 10 */
+			display: -webkit-flex;     /* NEW - Chrome */
+			display: flex;
+			flex-flow: row nowrap;
+      justify-content: space-between;
     }
     .site-branding {
         text-align: left;
@@ -1169,14 +1245,25 @@ a.donate-link {
     }
 
 		.site-title {
-			margin: 0 .5em;
-			padding: 0 .5em;
+			  margin: .5em .5em 0 .5em;
 		}
 }
 
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.post-loop-wrapper {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
 .type-post {
 	background-color: #FFFFFF;
 }
@@ -1194,7 +1281,6 @@ a.donate-link {
 		padding: 1em;
 }
 
-
 .updated:not(.published) {
 	display: none;
 }
@@ -1202,7 +1288,7 @@ a.donate-link {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0;
 	padding: 1em;
 }
 
@@ -1227,8 +1313,8 @@ a.donate-link {
 }
 
 .continue-reading a:hover, .continue-reading a:focus {
-	color: white;
-	background: green;
+	/* color: white;
+	background: green; */
 }
 
 
@@ -1250,27 +1336,72 @@ a.donate-link {
 
 /* styles for singular people posts */
 
-article.tfpeople header {
+.people-post-wrapper {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+
+}
+
+.people-post-wrapper {
 	text-align: center;
 }
 
-article.tfpeople header img {
-	max-width: 200px;
+.people-post-wrapper .circle-image {
+	width: 200px;
 }
 
-article.tfpeople header h1, article.tfpeople .entry-content {
+.people-post-wrapper .entry-content {
+	padding: 0;
+}
+
+/* .people-post-wrapper header h1, article.tfpeople .entry-content {
 	margin: 0;
 	padding-top: 0;
-}
+} */
 
 @media screen and (min-width: 600px) {
-	article.tfpeople {
-		display: flex;
+	.people-post-wrapper {
+		-webkit-flex-flow: row nowrap;
+		-ms-flex-flow: row nowrap;
+		flex-flow: row nowrap;
 	}
 
-	article.tfpeople header h1, article.tfpeople header h2 {
-		font-size: 1.2em;
+	.people-post-wrapper .entry-header {
+		width: 30%;
 	}
+
+	.people-post-wrapper .person-name {
+		margin-bottom: 0;
+	}
+
+	.people-post-wrapper .person-title {
+		margin-top: 0;
+	}
+	.people-post-wrapper .entry-content {
+		flex: 1 1 auto;
+    width: 70%;
+		padding-top: 1em;
+    margin-left: 1em;
+	}
+
+	.people-post-wrapper .entry-content p {
+		text-align: left;
+
+	}
+
+
+
+
+
+	/* article.tfpeople header h1, article.tfpeople header h2 {
+		font-size: 1.2em;
+	} */
 }
 
 /* frames for post and page body images */
@@ -1288,43 +1419,124 @@ article.tfpeople header h1, article.tfpeople .entry-content {
 	box-shadow: none;
 }
 
-div.type-post {
+/* blog index post loop thumbnails */
+
+
+.post-thumbnail-wrapper {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+ 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+ 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+ 	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
-	max-height: 300px;
-	margin: 2em 0;
+	-webkit-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	width: 400px;
+	margin: 1em;
 }
 
-.post img.size-tonyfoundation-preview {
+.post-thumbnail-wrapper img.size-tonyfoundation-preview {
+	width: 400px;
+	height: unset;
 	border: none;
 	box-shadow: none;
 }
 
-@media screen and (max-width: 749px) {
-	.post img.size-tonyfoundation-preview {
-		width: 80%;
-		height: 80%;
+.thumbnail-text-wrapper {
+	padding: 1em;
+}
+
+.thumbnail-text-wrapper .posted-on {
+	display: inline-block;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.thumbnail-text-wrapper .post-meta-wrapper a {
+	text-decoration: none;
+}
+
+.thumbnail-text-wrapper  .entry-title {
+
+}
+
+.thumbnail-text-wrapper  a.thumbnail-continue-reading {
+	font-style: italic;
+	text-align: right;
+	display: inline;
+}
+
+
+
+
+@media screen and (min-width: 900px) {
+
+
+	.post-loop-wrapper {
+		-webkit-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+
+	.post-thumbnail-wrapper {
+		-webkit-flex-flow: row nowrap;
+		-ms-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+		width: 860px;
+		font-size: 18px;
+	}
+
+	.post-thumbnail-wrapper img.size-tonyfoundation-preview {
+		height: 300px;
+		width: 300px;
+		flex: 0 0 auto;
  }
-}
+/*
+	.preview-text-wrapper .entry-content {
+		font-size: 18px;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: column nowrap;
+		-ms-flex-flow: column nowrap;
+		flex-flow: column nowrap;
+		padding: 0 1em 1em 1em;
+	}
 
-.entry-meta.preview {
-	margin-left: 1.5em;
-}
+	.preview-text-wrapper .entry-meta  {
+		text-align: left;
+	}
 
-.entry-meta.preview h2 {
-	font-size: 1.6em;
-	text-decoration: none;
-}
+	.preview-text-wrapper .entry-meta .entry-title {
+		background-color: transparent;
+	}
 
-.entry-meta.preview h2 a {
-	text-decoration: none;
-}
+	.preview-text-wrapper .entry-meta .entry-title h2 {
+		color: #262626;
+		font-size: 1.3em;
+	}
 
-.entry-content.preview {
-	margin: 0;
-	padding-left: 1.5em;
-}
-.preview-text-wrapper {
- font-size: .8em;
+	.preview-text-wrapper .entry-meta span {
+		margin-left: 21px;
+		margin-top: 0px;
+	}
+
+	.preview-text-wrapper p {
+		text-align: left;
+		margin-bottom: 0;
+		width: 490px;
+	}
+
+	.thumbnail-continue-reading {
+		font-style: italic;
+		text-align: right;
+		display: inline-block;
+		margin-top: 15px;
+	} */
+
 }
 
 /* post navigation */
@@ -1378,11 +1590,11 @@ div.type-post {
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-box-pack: justify;
-		    -ms-flex-pack: justify;
-		        justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
 		-webkit-box-align: stretch;
-		    -ms-flex-align: stretch;
-		        align-items: stretch;
+		-ms-flex-align: stretch;
+		align-items: stretch;
 		padding: 0;
 	}
 	.comment-navigation .nav-previous,
@@ -1396,8 +1608,8 @@ div.type-post {
 		display: -ms-flexbox;
 		display: flex;
 		-webkit-box-align: stretch;
-		    -ms-flex-align: stretch;
-		        align-items: stretch;
+		-ms-flex-align: stretch;
+		align-items: stretch;
 		width: 48%;
 	}
 	.comment-navigation .nav-next,
@@ -1477,55 +1689,144 @@ div.type-post {
 
 /* sticky post thumbnails */
 
-.sticky-posts-wrapper {
+.sticky-thumbnail-link {
+	color: unset;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.sticky-section-wrapper {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
+  -ms-flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+	justify-content: space-around;
 }
 
-.post-thumbnail-wrapper.sticky {
+.sticky-thumbnail-wrapper {
 	background-color: #D9D9D9;
-	max-width: 350px;
-  margin: 1em auto;
+	width: 250px;
+  margin: 10px;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
+	-ms-flex-flow: column nowrap;
+	-webkit-flex-flow: column nowrap;
 	flex-flow: column nowrap;
-	max-height: none;
+	text-decoration:none;
+	font-size: 1.2em;
+	font-weight: 400;
+
 }
 
-.post-thumbnail-wrapper.sticky .post-thumbnail-link {
-	display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-end;
+.sticky-thumbnail-wrapper img {
+	width: 250px;
+	border: none;
+	box-shadow: none;
 }
 
-.post-thumbnail-wrapper.sticky .post-thumbnail-link img {
+.sticky-thumbnail-wrapper .sticky-title-wrapper {
+	color: #FEFEFE;
+	background-color: #666666;
+	padding-bottom: 20px;
+	line-height: 1em;
+	text-align: center;
+}
+
+.sticky-excerpt-wrapper {
+	width: 250px;
+}
+
+.sticky-excerpt-wrapper p {
+	padding: 10px;
+  font-size: .8em;
+	width: 250px;
+}
+
+.sticky-continue-reading {
+	display: inline;
+	font-size: .7em;
+	font-style: italic;
+	text-align: right;
+	float: right;
+	padding: 10px;
+	margin: 0 10px 10px 0;
+}
+
+.sticky-continue-reading:hover {
+	background-color: #CAC5C5;
+}
+
+@media screen and (min-width: 401px) {
+
+	.sticky-thumbnail-wrapper {
+		width: 350px;
+	  margin: 1em;
+	}
+
+	.sticky-thumbnail-wrapper img {
+		width: 350px;
+	}
+
+	.sticky-title {
+		padding-left: 1em;
+	}
+
+	.sticky-excerpt-wrapper {
+		width: 350px;
+	}
+
+	.sticky-excerpt-wrapper p {
+		padding: 1em 1em 0 1em;
+		width: 350px;
+		margin: 0;
+	}
+
+}
+
+
+
+
+/* .sticky-thumbnail-wrapper .sticky-thumbnail-link {
+	-ms-flex: 1 1 300px;
+	flex: 1 1 300px;
+}
+
+.sticky-thumbnail-wrapper .sticky-thumbnail-link img {
 	width: 100%;
 	border: none;
 	box-shadow: none;
 }
 
-.post-thumbnail-wrapper.sticky .title-wrapper {
+.sticky-thumbnail-wrapper .sticky-title-wrapper {
 	position: relative;
   bottom: 3em;
   color: #F2F2F2;
-  background-color: #666666c4;
+  background-color: rgba(102,102,102,0.7);
   padding: 1em;
   height: 3em;
 	font-family: 'Roboto Slab', serif;
 }
 
-.sticky .title-wrapper h2 {
-	display: inline-block;
-	font-size: 1.2em;
-	font-weight: 600;
-	margin: auto;
-}
 
 .post-thumbnail-wrapper p {
  margin: 1.5em;
  margin-top: -1em;
  font-size: .8em;
-}
+} */
 
+/* main blog index page (home.php) */
+
+.blog-index-title h1 {
+	text-align: center;
+	margin-bottom: 1.5em;
+}
 
 /* About page */
 
@@ -1624,31 +1925,78 @@ ul.mission li {
 
 #leadership h1 {
 	text-align: center;
+	margin-bottom: 50px;
+}
+
+.leadership-section {
+	text-align: center;
+	font-weight: 400;
+	font-size: 1em;
+	margin: 50px 0;
 }
 
 .profile-list-wrapper {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
 	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
-	justify-content: space-evenly;
+	justify-content: center;
 	/* flex-direction: initial; */
 }
 
-.profile-wrapper {
-	flex-basis: wrap;
-	justify-content: space-evenly;
-	margin: 1em;
+.profile-list-wrapper .person-thumbnail-link {
+	text-decoration: unset;
 }
 
-.profile-wrapper h2, .profile-wrapper h3 {
+.profile-wrapper {
+	margin: 1em auto;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	align-items: center;
+	text-align: center;
+	width: 250px;
+}
+
+.profile-wrapper img {
+	width: 150px;
+}
+
+.profile-wrapper .person-name {
+	text-align: center;
+	font-size: .8em;
+}
+
+.profile-wrapper .person-title {
 	font-size: .8em;
 	text-align: center;
+	margin: 0;
 }
+
+.profile-wrapper .person-name {
+	text-decoration: none;
+}
+
 .profile-wrapper .post-thumbnail-link img {
 	max-width: 150px;
 }
 
 /* DONATION PAGE */
 .donation-form-wrapper {
+	margin: -3em;
+}
+
+/* CONTACT PAGE */
+.contact-form-wrapper {
 	margin: -3em;
 }
 
@@ -1775,14 +2123,18 @@ label[for*="EMAILTYPE"] {
 
 
 .site-features-wrapper {
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 	flex-flow: column wrap;
-	justify-content: center;
+	justify-content: space-around;
 	width: 100%;
 	margin-bottom: 1em;
 }
 
-.site-feature-link {
+.site-feature-wrapper-with-link {
 	margin: 1em;
 }
 
@@ -1795,14 +2147,20 @@ label[for*="EMAILTYPE"] {
 	min-height: 250px;
 }
 
-.site-feature.coming-soon{
-	background-image: url('images/coming-soon-ribbon.svg');
+.site-feature.coming-soon {
+	background-image: url('images/coming-soon-ribbon-xsm.svg');
 	background-size: cover;
 	display: block;
 	margin: 0 auto;
 	text-align: center;
 	max-width: 300px;
 	min-height: 250px;
+}
+
+@media screen and (min-width: 450px) {
+	.site-feature.coming-soon {
+		background-image: url('images/coming-soon-ribbon-sm.svg');
+	}
 }
 
 .site-feature-icon {
@@ -1822,26 +2180,39 @@ label[for*="EMAILTYPE"] {
 	 .site-features-wrapper {
 		flex-flow: row nowrap;
 	}
-	.site-feature {
-	flex: 1 1 auto;
-	max-width: unset;
-	min-height: 230px;
-	min-width: 240px;
 
+	.site-feature.coming-soon {
+		background-image: url('images/coming-soon-ribbon-lg.svg');
 	}
+
+	.site-feature, .site-feature.coming-soon {
+		flex: 1 1 auto;
+		max-width: unset;
+		min-height: 230px;
+		min-width: 240px;
+	}
+
 	.site-feature-label {
 		font-size: 20px;
 	}
 
 }
 
+
 /*--------------------------------------------------------------
 ## Site Footer
 --------------------------------------------------------------*/
 .site-footer {
 	background-color: #666666;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
+	-webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
 	flex-flow: column nowrap;
+	justify-content: center;
 	font-size: 1em;
 	color: #F2F2F2;
 	padding: 1em;
@@ -1850,7 +2221,7 @@ label[for*="EMAILTYPE"] {
 
 
 .footer-logo {
-	max-width: 80px;
+	width: 80px;
 	display: inline-block;
 	margin: 2em auto 1em auto;
 }
@@ -1865,11 +2236,11 @@ label[for*="EMAILTYPE"] {
 	line-height: 1;
 	padding: .5em;
 	margin: .5em auto;
-	max-width: 80%;
+	width: 210px;
 	text-decoration: none;
 }
 
-.site-footer button:hover, .site-footer button:focus {
+.site-footer a:hover, .site-footer a:focus {
 	color: #262626;
 	background-color: #F2F2F2;
 }
@@ -1878,6 +2249,8 @@ label[for*="EMAILTYPE"] {
 	list-style: none;
 	padding: 1em;
 	vertical-align: top;
+	width: unset;
+	margin: 0 auto;
 }
 
 .site-footer .page-list li {
@@ -1953,7 +2326,11 @@ footer .social-wrapper svg:hover, footer .social-wrapper svg:focus {
 
 @media screen and (min-width: 500px) {
 	.site-footer {
-		display: flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+display: -ms-flexbox;      /* TWEENER - IE 10 */
+display: -webkit-flex;     /* NEW - Chrome */
+display: flex;
 		font-size: .7em;
 		color: #F2F2F2;
 		padding: 1em 2em 0 2em;
@@ -1967,7 +2344,12 @@ footer .social-wrapper svg:hover, footer .social-wrapper svg:focus {
 
 	.site-footer .page-list {
 		margin: 0 auto;
-		display: inline-flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+		display: -ms-flexbox;      /* TWEENER - IE 10 */
+		display: -webkit-flex;     /* NEW - Chrome */
+		display: flex;
+		justify-content: center;
 	}
 
 	.site-footer .page-list li {

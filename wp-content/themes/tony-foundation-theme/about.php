@@ -22,33 +22,85 @@ get_header(); ?>
 
 				get_template_part( 'template-parts/content-about', 'page' );
 
-			endwhile; // End of the loop.
+			endwhile;
 			?>
 
 			<section id="leadership" class="about-section">
 				<h1>Our Leadership</h1>
 
+				<h2 class="leadership-section">Board of Directors</h2>
+
 			<div class="profile-list-wrapper">
 
-					<?php $people_query = new WP_Query( array( 'post_type' => 'tfpeople', 'posts_per_page' => -1 ) ); ?>
+					<?php $board_query = new WP_Query( array(
+						'post_type' => 'tfpeople',
+						'posts_per_page' => -1,
+						'meta_query'     => array(
+        			array(
+            		'key'       => 'person-is-on-board-of-directors',
+            		'value'     => '1',
+            		'compare'   => '='
+							),
+						'orderby'  => 'meta_value',
+    				'meta_key' => 'person-display-order',
+            'order'    => 'ASC')
+					)); ?>
 
-					<?php while ( $people_query->have_posts() ) : $people_query->the_post(); ?>
+					<?php while ( $board_query->have_posts() ) : $board_query->the_post(); ?>
 
-					<div class="profile-wrapper">
-						<a href="<?php the_permalink($post->ID) ?>" class="post-thumbnail-link">
+						<a href="<?php the_permalink($post->ID) ?>" class="person-thumbnail-link">
+							<div class="profile-wrapper">
+
 								<?php the_post_thumbnail('tonyfoundation-person', array('class' => 'circle-image')); ?>
-						</a><!--post-thumbnail-link-->
 								<?php
-									the_title( '<h2 class="person-name"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>');
+									the_title( '<h2 class="person-name">', '</h2>');
 									echo '<h3 class="person-title">';
 									echo get_post_meta($post->ID, 'person-title', true);
 									echo '</h3>';?>
 
-					</div><!--profile-wrapper-->
+							</div><!--profile-wrapper-->
+						</a><!--person-thumbnail-link-->
+
+					<?php endwhile;?>
+				</div><!--profile-list-wrapper-->
+
+					<h2 class="leadership-section">Staff</h2>
+
+					<div class="profile-list-wrapper">
+
+					<?php $staff_query = new WP_Query( array(
+						'post_type' => 'tfpeople',
+						'posts_per_page' => -1,
+						'meta_query'     => array(
+	        		array(
+	            	'key'       => 'person-is-staff',
+	            	'value'     => '1',
+	            	'compare'   => '='
+							),
+						'orderby'  => 'meta_value',
+	    			'meta_key' => 'person-display-order', 
+	          'order'    => 'ASC')
+					)); ?>
+
+					<?php while ( $staff_query->have_posts() ) : $staff_query->the_post(); ?>
+
+						<a href="<?php the_permalink($post->ID) ?>" class="person-thumbnail-link">
+							<div class="profile-wrapper">
+
+								<?php the_post_thumbnail('tonyfoundation-person', array('class' => 'circle-image')); ?>
+								<?php
+									the_title( '<h2 class="person-name">', '</h2>');
+									echo '<h3 class="person-title">';
+									echo get_post_meta($post->ID, 'person-title', true);
+									echo '</h3>';?>
+
+							</div><!--profile-wrapper-->
+						</a><!--person-thumbnail-link-->
 
 					<?php endwhile;?>
 
 				</div><!--profile-list-wrapper-->
+
 			</section>
 
 

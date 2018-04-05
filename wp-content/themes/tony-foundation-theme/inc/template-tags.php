@@ -24,13 +24,14 @@ if ( ! function_exists( 'tonyfoundation_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( 'Posted %s', 'post date', 'tonyfoundation' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+		// $posted_on = sprintf(
+		// 	/* translators: %s: post date. */
+		// 	esc_html_x( 'Posted %s', 'post date', 'tonyfoundation' ),
+		// 	'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		// );
+
+		echo '<span class="posted-on">Posted ' .$time_string . '</span>'; // WPCS: XSS OK.
                 }
 endif;
 
