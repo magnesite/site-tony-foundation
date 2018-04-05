@@ -22,7 +22,7 @@ get_header(); ?>
 
 				get_template_part( 'template-parts/content-about', 'page' );
 
-			endwhile; // End of the loop.
+			endwhile;
 			?>
 
 			<section id="leadership" class="about-section">
@@ -42,7 +42,7 @@ get_header(); ?>
             		'compare'   => '='
 							),
 						'orderby'  => 'meta_value',
-    				'meta_key' => 'person-display-order', // this states which meta field
+    				'meta_key' => 'person-display-order',
             'order'    => 'ASC')
 					)); ?>
 
@@ -78,7 +78,7 @@ get_header(); ?>
 	            	'compare'   => '='
 							),
 						'orderby'  => 'meta_value',
-	    			'meta_key' => 'person-display-order', // this states which meta field
+	    			'meta_key' => 'person-display-order', 
 	          'order'    => 'ASC')
 					)); ?>
 
