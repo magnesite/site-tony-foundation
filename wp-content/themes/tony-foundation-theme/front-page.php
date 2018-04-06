@@ -33,7 +33,7 @@ get_header(); ?>
 						<h2 class="site-feature-label">Apply for Assistance</h2>
 					</div><!--site-feature-->
 			</a><!--site-feature-wrapper-with-link-->
-			<a class="site-feature-wrapper-with-link" href="<?php echo site_url(); ?>/tfcustompage/get-involved">
+			<a class="site-feature-wrapper-with-link" href="<?php echo site_url(); ?>/get-involved/">
 				<div class="site-feature">
 					<img id="icon-get-involved" class="site-feature-icon" src="<?php echo site_url(); ?>/wp-content/themes/tony-foundation-theme/images/icon-get-involved.png"/>
 					<h2 class="site-feature-label">Get Involved</h2>
