@@ -35,7 +35,7 @@
 				</a>
 			</div><!--social-wrapper-->
 			<div class="legal-wrapper">
-				<p class="copyright-notice">Copyright 2018 Tony Foundation</p>
+				<p class="copyright-notice">Copyright 2018 Tony Foundation. Tony Foundation's 501(c)3 tax exempt status is pending.</p>
 				<!-- <p><a href="#">Site Terms of Use</a> | <a href="#">Privacy Policy</a></p> -->
 			</div><!--legal-wrapper-->
 
