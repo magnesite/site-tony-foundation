@@ -31,18 +31,56 @@ get_header(); ?>
 
 				<div class="profile-list-wrapper">
 
+						<?php $board_query = new WP_Query( array(
+							'post_type' => 'tfpeople',
+							'posts_per_page' => -1,
+							'meta_query'     => array(
+	        			array(
+	            		'key'       => 'person-is-on-board-of-directors',
+	            		'value'     => '1',
+	            		'compare'   => '='
+								),
+							'orderby'  => 'meta_value',
+	    				'meta_key' => 'person-display-order',
+	            'order'    => 'ASC')
+						)); ?>
+
+						<?php while ( $board_query->have_posts() ) : $board_query->the_post(); ?>
+
+							<a href="<?php the_permalink($post->ID) ?>" class="person-thumbnail-link">
+								<div class="profile-wrapper">
+
+									<?php the_post_thumbnail('tonyfoundation-person', array('class' => 'circle-image')); ?>
+									<?php
+										the_title( '<h2 class="person-name">', '</h2>');
+										echo '<h3 class="person-title">';
+										echo get_post_meta($post->ID, 'person-title', true);
+										echo '</h3>';?>
+
+								</div><!--profile-wrapper-->
+							</a><!--person-thumbnail-link-->
+
+						<?php endwhile;?>
+					</div><!--profile-list-wrapper-->
+
+
+
+				<h2 class="leadership-section">Board of Directors</h2>
+
+			<div class="profile-list-wrapper">
+
 					<?php $board_query = new WP_Query( array(
 						'post_type' => 'tfpeople',
 						'posts_per_page' => -1,
 						'meta_query'     => array(
-							array(
-								'key'       => 'person-is-on-board-of-directors',
-								'value'     => '1',
-								'compare'   => '='
+        			array(
+            		'key'       => 'person-is-on-board-of-directors',
+            		'value'     => '1',
+            		'compare'   => '='
 							),
 						'orderby'  => 'meta_value',
-						'meta_key' => 'person-display-order',
-						'order'    => 'ASC')
+    				'meta_key' => 'person-display-order',
+            'order'    => 'ASC')
 					)); ?>
 
 					<?php while ( $board_query->have_posts() ) : $board_query->the_post(); ?>
@@ -62,6 +100,9 @@ get_header(); ?>
 
 					<?php endwhile;?>
 				</div><!--profile-list-wrapper-->
+
+
+
 
 			</section>
 
